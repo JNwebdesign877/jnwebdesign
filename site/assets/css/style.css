@@ -353,3 +353,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   .btn, .site-nav, .menu-open .site-nav, .menu-toggle__bars, .menu-toggle__bars::before, .shots .phone { transition: none; }
 }
+
+/* long email addresses wrap instead of pushing the page sideways on phones */
+.direct a, .site-footer a { overflow-wrap: anywhere; }
