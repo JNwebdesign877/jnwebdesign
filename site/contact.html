@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ota yhteyttä | JN design</title>
+  <meta name="description" content="Kerro projektistasi. Vastaan yleensä saman päivän aikana.">
+  <meta name="author" content="Julius Nordman">
+  <meta name="theme-color" content="#e9ecee">
+  <link rel="canonical" href="https://jnwebdesign.com/contact.html">
+  <link rel="alternate" hreflang="fi" href="https://jnwebdesign.com/contact.html">
+  <link rel="alternate" hreflang="sv" href="https://jnwebdesign.com/sv/contact.html">
+  <link rel="alternate" hreflang="en" href="https://jnwebdesign.com/en/contact.html">
+  <link rel="alternate" hreflang="x-default" href="https://jnwebdesign.com/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JN design">
+  <meta property="og:title" content="Ota yhteyttä | JN design">
+  <meta property="og:description" content="Kerro projektistasi. Vastaan yleensä saman päivän aikana.">
+  <meta property="og:url" content="https://jnwebdesign.com/contact.html">
+  <meta property="og:locale" content="fi_FI">
+  <link rel="icon" type="image/png" href="assets/img/jn-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Schibsted+Grotesk:wght@400..800&display=swap">
+  <link rel="stylesheet" href="assets/vendor/lenis.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('jn-motion', '1');
+        else force = sessionStorage.getItem('jn-motion') === '1';
+      } catch (e) {}
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body class="page-contact">
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html" aria-label="JN design, etusivu">
+        <img src="assets/img/jn-logo.png" width="728" height="600" alt="">
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Valikko">
+        <ul class="site-nav__links">
+          <li><a href="work.html">Työt</a></li>
+          <li><a href="services.html">Palvelut</a></li>
+          <li><a href="about.html">Tietoa</a></li>
+          <li><a href="contact.html" aria-current="page">Yhteys</a></li>
+        </ul>
+        <ul class="lang" aria-label="Kieli">
+          <li><a href="contact.html" hreflang="fi" lang="fi" aria-current="true">FI</a></li>
+          <li><a href="sv/contact.html" hreflang="sv" lang="sv">SV</a></li>
+          <li><a href="en/contact.html" hreflang="en" lang="en">EN</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--small site-header__cta" href="contact.html">Pyydä tarjous</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Valikko</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section contact">
+      <div class="wrap contact__grid">
+        <div class="contact__intro">
+          <h1 class="page-title">Ota yhteyttä</h1>
+          <p class="page-lead">Kerro lyhyesti projektistasi, niin vastaan yleensä saman päivän aikana.</p>
+          <div class="direct">
+            <h2>Suorat yhteystiedot</h2>
+            <ul>
+              <li><a href="mailto:junordman@gmail.com">junordman@gmail.com</a></li>
+              <li><a href="tel:+358452249789">045 224 9789</a></li>
+              <li>Helsinki, Suomi</li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate
+              data-err-req="Täytä tämä kenttä." data-err-email="Kirjoita sähköpostiosoite muodossa nimi@esimerkki.fi." data-err-check="Tarkista merkityt kentät."
+              data-sending="Lähetetään…" data-sent="Kiitos, viestisi on lähetetty. Vastaan yleensä saman päivän aikana." data-fail="Viestiä ei voitu lähettää. Lähetä se sähköpostilla osoitteeseen junordman@gmail.com.">
+          <!-- Web3Forms sends each message to Julius's email. The access key is public by design. -->
+          <input type="hidden" name="access_key" value="PASTE_WEB3FORMS_ACCESS_KEY_HERE">
+          <input type="hidden" name="subject" value="Yhteydenotto jnwebdesign.com (fi)">
+          <input type="hidden" name="from_name" value="jnwebdesign.com">
+          <input type="hidden" name="language" value="fi">
+          <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form__row">
+            <div class="field">
+              <label for="f-name">Nimi</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Sähköposti</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-type">Mitä tarvitset?</label>
+            <select id="f-type" name="project" required>
+              <option value="">Valitse</option>
+              <option value="1">Yksisivuinen (350 €)</option>
+              <option value="2">Pienyrityksen sivusto (550 €)</option>
+              <option value="3">Laajempi sivusto (alkaen 800 €)</option>
+              <option value="4">Sivuston uudistus</option>
+              <option value="5">Muu</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Viesti</label>
+            <textarea id="f-msg" name="message" rows="6" required aria-describedby="f-msg-hint"></textarea>
+            <p class="field__hint" id="f-msg-hint">Kerro esimerkiksi, millainen yritys on kyseessä, mitä sivuja tarvitset ja milloin.</p>
+          </div>
+          <div class="form__footer">
+            <button class="btn btn--primary" type="submit">Lähetä viesti</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </div>
+          <p class="form__privacy">Käytän tietojasi vain viestiisi vastaamiseen.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">
+        <img class="site-footer__logo" src="assets/img/jn-logo.png" width="728" height="600" alt="JN design">
+        <p>Selkeät verkkosivut pienyrityksille Helsingistä.</p>
+      </div>
+      <div>
+        <h2>Sivut</h2>
+        <ul>
+          <li><a href="work.html">Työt</a></li>
+          <li><a href="services.html">Palvelut</a></li>
+          <li><a href="about.html">Tietoa</a></li>
+          <li><a href="contact.html">Yhteys</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Yhteystiedot</h2>
+        <ul>
+          <li><a href="mailto:junordman@gmail.com">junordman@gmail.com</a></li>
+          <li><a href="tel:+358452249789">045 224 9789</a></li>
+          <li>Helsinki, Suomi</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap site-footer__bottom">
+      <p>© 2026 JN design, Julius Nordman</p>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

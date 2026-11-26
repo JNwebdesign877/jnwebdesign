@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | JN design</title>
+  <meta name="description" content="JN design is Julius Nordman's small web studio in Helsinki.">
+  <meta name="author" content="Julius Nordman">
+  <meta name="theme-color" content="#e9ecee">
+  <link rel="canonical" href="https://jnwebdesign.com/en/about.html">
+  <link rel="alternate" hreflang="fi" href="https://jnwebdesign.com/about.html">
+  <link rel="alternate" hreflang="sv" href="https://jnwebdesign.com/sv/about.html">
+  <link rel="alternate" hreflang="en" href="https://jnwebdesign.com/en/about.html">
+  <link rel="alternate" hreflang="x-default" href="https://jnwebdesign.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JN design">
+  <meta property="og:title" content="About | JN design">
+  <meta property="og:description" content="JN design is Julius Nordman's small web studio in Helsinki.">
+  <meta property="og:url" content="https://jnwebdesign.com/en/about.html">
+  <meta property="og:locale" content="en_GB">
+  <link rel="icon" type="image/png" href="../assets/img/jn-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Schibsted+Grotesk:wght@400..800&display=swap">
+  <link rel="stylesheet" href="../assets/vendor/lenis.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('jn-motion', '1');
+        else force = sessionStorage.getItem('jn-motion') === '1';
+      } catch (e) {}
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body class="page-about">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html" aria-label="JN design, home">
+        <img src="../assets/img/jn-logo.png" width="728" height="600" alt="">
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Menu">
+        <ul class="site-nav__links">
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="lang" aria-label="Language">
+          <li><a href="../about.html" hreflang="fi" lang="fi">FI</a></li>
+          <li><a href="../sv/about.html" hreflang="sv" lang="sv">SV</a></li>
+          <li><a href="../en/about.html" hreflang="en" lang="en" aria-current="true">EN</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--small site-header__cta" href="contact.html">Get a quote</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section about">
+      <div class="wrap about__grid">
+        <div class="about__text">
+          <h1 class="page-title">Hi, I'm Julius.</h1>
+          <p class="page-lead">JN design is a small web studio in Helsinki, and I do everything myself: design, code and launch. When you get in touch, you talk directly to the person building your site.</p>
+          <p>I use AI and modern tools so the work moves fast. The design and the final result are still my decisions, and your site isn't assembled from a ready-made template.</p>
+          <p>I build sites for small businesses, freelancers and associations that want a clear website without a long project or monthly fees.</p>
+          <div class="about__actions">
+            <a class="btn btn--primary" href="work.html">See my work</a>
+            <a class="btn btn--ghost" href="contact.html">Get in touch</a>
+          </div>
+        </div>
+        <div class="about__side">
+        <figure class="about__photo">
+          <img src="../assets/img/helsinki-900.jpg"
+               srcset="../assets/img/helsinki-900.jpg 900w, ../assets/img/helsinki-1600.jpg 1600w"
+               sizes="(min-width: 860px) 34vw, 100vw" width="1600" height="1075"
+               alt="Helsinki Cathedral in winter, seen across the frozen sea">
+          <figcaption><a href="https://unsplash.com/photos/white-and-blue-mosque-among-buildings-For4352Fgwg">Photo: Jaakko Kemppainen, Unsplash</a></figcaption>
+        </figure>
+        <dl class="facts">
+          <div><dt>Based in</dt><dd>Helsinki</dd></div>
+          <div><dt>Languages</dt><dd>Finnish, Swedish and English</dd></div>
+          <div><dt>Tools</dt><dd>HTML, CSS, JavaScript, GSAP and AI</dd></div>
+        </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">
+        <img class="site-footer__logo" src="../assets/img/jn-logo.png" width="728" height="600" alt="JN design">
+        <p>Clear websites for small businesses, from Helsinki.</p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:junordman@gmail.com">junordman@gmail.com</a></li>
+          <li><a href="tel:+358452249789">045 224 9789</a></li>
+          <li>Helsinki, Finland</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap site-footer__bottom">
+      <p>© 2026 JN design, Julius Nordman</p>
+    </div>
+  </footer>
+
+  <script src="../assets/vendor/gsap.min.js"></script>
+  <script src="../assets/vendor/lenis.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

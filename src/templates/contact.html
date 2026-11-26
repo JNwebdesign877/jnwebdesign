@@ -1,0 +1,58 @@
+    <section class="section contact">
+      <div class="wrap contact__grid">
+        <div class="contact__intro">
+          <h1 class="page-title">{{contact_h1}}</h1>
+          <p class="page-lead">{{contact_lead}}</p>
+          <div class="direct">
+            <h2>{{direct_h}}</h2>
+            <ul>
+              <li><a href="mailto:junordman@gmail.com">junordman@gmail.com</a></li>
+              <li><a href="tel:+358452249789">045 224 9789</a></li>
+              <li>{{location}}</li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate
+              data-err-req="{{f_err_req}}" data-err-email="{{f_err_email}}" data-err-check="{{f_err_check}}"
+              data-sending="{{f_sending}}" data-sent="{{f_sent}}" data-fail="{{f_fail}}">
+          <!-- Web3Forms sends each message to Julius's email. The access key is public by design. -->
+          <input type="hidden" name="access_key" value="{{web3forms_key}}">
+          <input type="hidden" name="subject" value="Yhteydenotto jnwebdesign.com ({{html_lang}})">
+          <input type="hidden" name="from_name" value="jnwebdesign.com">
+          <input type="hidden" name="language" value="{{html_lang}}">
+          <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form__row">
+            <div class="field">
+              <label for="f-name">{{f_name}}</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-email">{{f_email}}</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-type">{{f_type}}</label>
+            <select id="f-type" name="project" required>
+              <option value="">{{f_choose}}</option>
+              <option value="1">{{f_opt1}}</option>
+              <option value="2">{{f_opt2}}</option>
+              <option value="3">{{f_opt3}}</option>
+              <option value="4">{{f_opt4}}</option>
+              <option value="5">{{f_opt5}}</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">{{f_msg}}</label>
+            <textarea id="f-msg" name="message" rows="6" required aria-describedby="f-msg-hint"></textarea>
+            <p class="field__hint" id="f-msg-hint">{{f_hint}}</p>
+          </div>
+          <div class="form__footer">
+            <button class="btn btn--primary" type="submit">{{f_send}}</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </div>
+          <p class="form__privacy">{{f_privacy}}</p>
+        </form>
+      </div>
+    </section>

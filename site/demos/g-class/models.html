@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Models | G-Class Concept</title>
+  <meta name="description" content="The G 550, the G 580 with EQ Technology and the AMG G 63 compared: price, power, torque and acceleration.">
+  <meta name="author" content="Julius Nordman, JN Design">
+  <meta name="theme-color" content="#1b1e21">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="stylesheet" href="assets/vendor/lenis.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('gclass-motion', '1');
+        else force = sessionStorage.getItem('gclass-motion') === '1';
+      } catch (e) {}
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body class="is-inner">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="wordmark" href="index.html" aria-label="G-Class, home">G-Class</a>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="models.html" aria-current="page">Models</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="g-turn.html">G-TURN</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--small site-header__cta" href="test-drive.html">Book a test drive</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <section class="section models" aria-labelledby="models-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h1 id="models-title" class="page-title">Three drivetrains, one body.</h1>
+          <p>Every G-Class shares the ladder frame, the boxy steel body and the low-range gearing for real off-road use. What changes is what turns the wheels.</p>
+        </div>
+
+        <div class="models__grid">
+          <article class="model">
+            <h2 class="model__name">G 550</h2>
+            <p class="model__desc">3.0-liter turbocharged inline-six with a 48-volt mild-hybrid system, a nine-speed automatic and three locking differentials.</p>
+            <dl class="model__specs">
+              <div><dt>Starting MSRP</dt><dd>$153,900</dd></div>
+              <div><dt>Power</dt><dd>443 hp</dd></div>
+              <div><dt>Torque</dt><dd>413 lb-ft</dd></div>
+              <div><dt>0 to 60 mph</dt><dd>5.3 s</dd></div>
+            </dl>
+            <a class="btn btn--ghost model__cta" href="test-drive.html?model=G%20550">Test drive the G 550</a>
+          </article>
+
+          <article class="model model--featured">
+            <h2 class="model__name">G 580 <span>with EQ Technology</span></h2>
+            <p class="model__desc">Four electric motors, one at each wheel, fed by a 116 kWh battery that sits inside the ladder frame. EPA-estimated range of 239 miles.</p>
+            <dl class="model__specs">
+              <div><dt>Starting MSRP</dt><dd>$163,750</dd></div>
+              <div><dt>Power</dt><dd>579 hp</dd></div>
+              <div><dt>Torque</dt><dd>859 lb-ft</dd></div>
+              <div><dt>0 to 60 mph</dt><dd>4.6 s</dd></div>
+            </dl>
+            <a class="btn btn--primary model__cta" href="test-drive.html?model=G%20580%20with%20EQ%20Technology">Test drive the G 580</a>
+          </article>
+
+          <article class="model">
+            <h2 class="model__name">AMG G 63</h2>
+            <p class="model__desc">Handcrafted 4.0-liter biturbo V8 with hybrid assist, built in Affalterbach on the one-engine, one-engineer principle.</p>
+            <dl class="model__specs">
+              <div><dt>Starting MSRP</dt><dd>$198,750</dd></div>
+              <div><dt>Power</dt><dd>577 hp</dd></div>
+              <div><dt>Torque</dt><dd>627 lb-ft</dd></div>
+              <div><dt>0 to 60 mph</dt><dd>4.2 s</dd></div>
+            </dl>
+            <a class="btn btn--ghost model__cta" href="test-drive.html?model=AMG%20G%2063">Test drive the AMG G 63</a>
+          </article>
+        </div>
+        <p class="footnote">US starting MSRP as listed on mbusa.com in November 2026, before destination charges. Acceleration times are manufacturer figures.</p>
+      </div>
+    </section>
+
+    <nav class="next-page wrap" aria-label="Next page">
+      <a href="design.html"><span class="next-page__label">Next</span> <span class="next-page__title">Design details</span></a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">
+        <a class="wordmark" href="index.html">G-Class</a>
+        <p class="site-footer__credit">Designed and built by Julius Nordman, JN Design.</p>
+        <p>An unofficial design study made for a portfolio. Not affiliated with or endorsed by Mercedes-Benz. G-Class, G 550, G 580 and AMG are trademarks of Mercedes-Benz Group AG.</p>
+      </div>
+      <div class="site-footer__col">
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="https://www.mbusa.com/en/vehicles/class/g-class/suv">Model specs and prices, mbusa.com</a></li>
+          <li><a href="https://media.mbusa.com/news/the-gelandewagen-electrified">G 580 off-road figures, Mercedes-Benz USA press</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class">History, Wikipedia</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Photos on Unsplash</h2>
+        <ul>
+          <li><a href="https://unsplash.com/photos/black-suv-before-snowy-mountains-xZJ6uV5F4_k">Mountains and wet track, D Panyukov</a></li>
+          <li><a href="https://unsplash.com/photos/black-suv-with-glowing-headlight-2o_rxu8morY">Headlight, Rico Reynaldi</a></li>
+          <li><a href="https://unsplash.com/photos/grayscale-photo-of-suv-parked-beside-wall-Sa5lP-M-RGo">Rear view, Endri Killo</a></li>
+          <li><a href="https://unsplash.com/photos/black-mercedes-benz-g-class-in-tunnel-qfniR1cYiOI">Underpass, Alexis AMZ DA CRUZ</a></li>
+          <li><a href="https://unsplash.com/photos/black-mercedes-g-wagon-parked-on-textured-pavement-outdoors-f9XVp_zBvbo">Autumn fog, Tim Vegas</a></li>
+          <li><a href="https://unsplash.com/photos/silver-mercedes-benz-g-class-near-table-mountain-PtJDCD4fTI4">Cape Town, Gilles De Muynck</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JN design | Verkkosivut pienyrityksille, Helsinki</title>
+  <meta name="description" content="Julius Nordman suunnittelee ja koodaa selkeät verkkosivut pienyrityksille Helsingissä. Kiinteät hinnat alkaen 350 €.">
+  <meta name="author" content="Julius Nordman">
+  <meta name="theme-color" content="#e9ecee">
+  <link rel="canonical" href="https://jnwebdesign.com/">
+  <link rel="alternate" hreflang="fi" href="https://jnwebdesign.com/">
+  <link rel="alternate" hreflang="sv" href="https://jnwebdesign.com/sv/">
+  <link rel="alternate" hreflang="en" href="https://jnwebdesign.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://jnwebdesign.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JN design">
+  <meta property="og:title" content="JN design | Verkkosivut pienyrityksille, Helsinki">
+  <meta property="og:description" content="Julius Nordman suunnittelee ja koodaa selkeät verkkosivut pienyrityksille Helsingissä. Kiinteät hinnat alkaen 350 €.">
+  <meta property="og:url" content="https://jnwebdesign.com/">
+  <meta property="og:locale" content="fi_FI">
+  <link rel="icon" type="image/png" href="assets/img/jn-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Schibsted+Grotesk:wght@400..800&display=swap">
+  <link rel="stylesheet" href="assets/vendor/lenis.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('jn-motion', '1');
+        else force = sessionStorage.getItem('jn-motion') === '1';
+      } catch (e) {}
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body class="page-index">
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html" aria-label="JN design, etusivu">
+        <img src="assets/img/jn-logo.png" width="728" height="600" alt="">
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Valikko">
+        <ul class="site-nav__links">
+          <li><a href="work.html">Työt</a></li>
+          <li><a href="services.html">Palvelut</a></li>
+          <li><a href="about.html">Tietoa</a></li>
+          <li><a href="contact.html">Yhteys</a></li>
+        </ul>
+        <ul class="lang" aria-label="Kieli">
+          <li><a href="index.html" hreflang="fi" lang="fi" aria-current="true">FI</a></li>
+          <li><a href="sv/index.html" hreflang="sv" lang="sv">SV</a></li>
+          <li><a href="en/index.html" hreflang="en" lang="en">EN</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--small site-header__cta" href="contact.html">Pyydä tarjous</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Valikko</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <h1 class="hero__title">
+            <span class="line"><span>Selkeät verkkosivut</span></span>
+            <span class="line"><span>pienyrityksille.</span></span>
+          </h1>
+          <p class="hero__lead">Olen Julius Nordman, verkkosuunnittelija ja kehittäjä Helsingistä. Suunnittelen ja koodaan sivustosi alusta loppuun, ja hinnasta sovitaan ennen kuin aloitan. Sivusto valmistuu päivissä, ei kuukausissa.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="services.html">Katso paketit</a>
+            <a class="btn btn--ghost" href="contact.html">Pyydä tarjous</a>
+          </div>
+        </div>
+        <a class="hero__panel" href="demos/g-class/index.html">
+          <span class="shots">
+            <span class="frame">
+              <span class="frame__bar">jnwebdesign.com/demos/g-class</span>
+              <img src="assets/img/shot-gclass-desktop.jpg" width="1440" height="900" alt="Kuvakaappaus G-Class-demon etusivusta tietokoneella">
+            </span>
+            <img class="phone" src="assets/img/shot-gclass-phone.jpg" width="780" height="1688" alt="Sama sivu puhelimessa">
+          </span>
+          <span class="hero__panel-text">
+            <span class="hero__panel-label">Viimeisin työ</span>
+            <span class="hero__panel-title">G-Class-konsepti</span>
+            <span class="hero__panel-link">Avaa demo</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section process" aria-labelledby="process-h">
+      <div class="wrap">
+        <h2 id="process-h">Näin projekti etenee</h2>
+        <ol class="steps">
+          <li><span class="steps__n">1</span><h3>Kerro projektistasi</h3><p>Lähetä viesti tai soita. Vastaan yleensä saman päivän aikana.</p></li>
+          <li><span class="steps__n">2</span><h3>Sovitaan sisältö ja hinta</h3><p>Saat kirjallisen hinnan ennen kuin työ alkaa. Ei piilokuluja.</p></li>
+          <li><span class="steps__n">3</span><h3>Suunnittelen ja koodaan</h3><p>Näet sivuston jo työn aikana ja voit kommentoida sitä.</p></li>
+          <li><span class="steps__n">4</span><h3>Julkaisu ja opastus</h3><p>Hoidan julkaisun ja domain-ohjauksen ja käyn valmiin sivuston kanssasi läpi.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section packages packages--dark" aria-labelledby="pk-h">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="pk-h">Paketit</h2>
+          <p>Kiinteät hinnat, jotka sovitaan ennen kuin aloitan.</p>
+        </div>
+        <div class="pk-grid">
+          <article class="pk"><h3 class="pk__name">Yksisivuinen</h3><p class="pk__price">350 €</p><p class="pk__text">Yksi selkeä sivu, joka kertoo, kuka olet ja miten sinuun saa yhteyden.</p></article>
+          <article class="pk"><h3 class="pk__name">Pienyrityksen sivusto</h3><p class="pk__price">550 €</p><p class="pk__text">Muutama sivu palveluille, hinnoille ja yhteystiedoille.</p></article>
+          <article class="pk"><h3 class="pk__name">Laajempi sivusto</h3><p class="pk__price">alkaen 800 €</p><p class="pk__text">Isompi sivusto, useampi kieli ja omat animaatiot.</p></article>
+        </div>
+        <a class="text-link text-link--light" href="services.html">Katso, mitä paketit sisältävät</a>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-h">
+      <div class="wrap cta-band__inner">
+        <div>
+          <h2 id="cta-h">Tehdäänkö yrityksellesi uudet verkkosivut?</h2>
+          <p>Kerro lyhyesti projektistasi, niin vastaan yleensä saman päivän aikana.</p>
+        </div>
+        <a class="btn btn--light" href="contact.html">Ota yhteyttä</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">
+        <img class="site-footer__logo" src="assets/img/jn-logo.png" width="728" height="600" alt="JN design">
+        <p>Selkeät verkkosivut pienyrityksille Helsingistä.</p>
+      </div>
+      <div>
+        <h2>Sivut</h2>
+        <ul>
+          <li><a href="work.html">Työt</a></li>
+          <li><a href="services.html">Palvelut</a></li>
+          <li><a href="about.html">Tietoa</a></li>
+          <li><a href="contact.html">Yhteys</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Yhteystiedot</h2>
+        <ul>
+          <li><a href="mailto:junordman@gmail.com">junordman@gmail.com</a></li>
+          <li><a href="tel:+358452249789">045 224 9789</a></li>
+          <li>Helsinki, Suomi</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap site-footer__bottom">
+      <p>© 2026 JN design, Julius Nordman</p>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Työt | JN design</title>
+  <meta name="description" content="Valmiita verkkosivuja ja demoja, jotka Julius Nordman on suunnitellut ja koodannut.">
+  <meta name="author" content="Julius Nordman">
+  <meta name="theme-color" content="#e9ecee">
+  <link rel="canonical" href="https://jnwebdesign.com/work.html">
+  <link rel="alternate" hreflang="fi" href="https://jnwebdesign.com/work.html">
+  <link rel="alternate" hreflang="sv" href="https://jnwebdesign.com/sv/work.html">
+  <link rel="alternate" hreflang="en" href="https://jnwebdesign.com/en/work.html">
+  <link rel="alternate" hreflang="x-default" href="https://jnwebdesign.com/work.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JN design">
+  <meta property="og:title" content="Työt | JN design">
+  <meta property="og:description" content="Valmiita verkkosivuja ja demoja, jotka Julius Nordman on suunnitellut ja koodannut.">
+  <meta property="og:url" content="https://jnwebdesign.com/work.html">
+  <meta property="og:locale" content="fi_FI">
+  <link rel="icon" type="image/png" href="assets/img/jn-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Schibsted+Grotesk:wght@400..800&display=swap">
+  <link rel="stylesheet" href="assets/vendor/lenis.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('jn-motion', '1');
+        else force = sessionStorage.getItem('jn-motion') === '1';
+      } catch (e) {}
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body class="page-work">
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html" aria-label="JN design, etusivu">
+        <img src="assets/img/jn-logo.png" width="728" height="600" alt="">
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Valikko">
+        <ul class="site-nav__links">
+          <li><a href="work.html" aria-current="page">Työt</a></li>
+          <li><a href="services.html">Palvelut</a></li>
+          <li><a href="about.html">Tietoa</a></li>
+          <li><a href="contact.html">Yhteys</a></li>
+        </ul>
+        <ul class="lang" aria-label="Kieli">
+          <li><a href="work.html" hreflang="fi" lang="fi" aria-current="true">FI</a></li>
+          <li><a href="sv/work.html" hreflang="sv" lang="sv">SV</a></li>
+          <li><a href="en/work.html" hreflang="en" lang="en">EN</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--small site-header__cta" href="contact.html">Pyydä tarjous</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Valikko</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section page-head">
+      <div class="wrap">
+        <h1 class="page-title">Töitä ja demoja</h1>
+        <p class="page-lead">Täältä löydät valmiita sivustoja ja demoja, joita olen tehnyt. Kaikki ovat verkossa, joten voit avata ne ja kokeilla itse.</p>
+      </div>
+    </section>
+
+    <section class="section work">
+      <div class="wrap">
+        <article class="case">
+          <a class="case__media shots" href="demos/g-class/index.html" tabindex="-1">
+            <span class="frame">
+              <span class="frame__bar">jnwebdesign.com/demos/g-class</span>
+              <img src="assets/img/shot-gclass-desktop.jpg" width="1440" height="900" alt="Kuvakaappaus G-Class-demon etusivusta tietokoneella">
+            </span>
+            <img class="phone" src="assets/img/shot-gclass-phone.jpg" width="780" height="1688" alt="Sama sivu puhelimessa">
+          </a>
+          <div class="case__text">
+            <h2 class="case__title">G-Class-konsepti</h2>
+            <p>Epävirallinen konseptisivusto Mercedes-Benz G-Classille: seitsemän erillistä sivua, mallien vertailu ja G-TURN-animaatio, joka pyörii vierittäessä. Tehty portfoliota varten.</p>
+            <ul class="case__points">
+              <li>Seitsemän sivua</li>
+              <li>Mallien vertailu oikeilla tiedoilla</li>
+              <li>Koeajon varauslomake</li>
+            </ul>
+            <a class="btn btn--primary" href="demos/g-class/index.html">Avaa demo</a>
+            <p class="case__note">Ei Mercedes-Benzin tilaama tai hyväksymä.</p>
+          </div>
+        </article>
+        <p class="work__more">Uusia demoja lisätään tänne sitä mukaa kuin niitä valmistuu.</p>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-h">
+      <div class="wrap cta-band__inner">
+        <div>
+          <h2 id="cta-h">Tehdäänkö yrityksellesi uudet verkkosivut?</h2>
+          <p>Kerro lyhyesti projektistasi, niin vastaan yleensä saman päivän aikana.</p>
+        </div>
+        <a class="btn btn--light" href="contact.html">Ota yhteyttä</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">
+        <img class="site-footer__logo" src="assets/img/jn-logo.png" width="728" height="600" alt="JN design">
+        <p>Selkeät verkkosivut pienyrityksille Helsingistä.</p>
+      </div>
+      <div>
+        <h2>Sivut</h2>
+        <ul>
+          <li><a href="work.html">Työt</a></li>
+          <li><a href="services.html">Palvelut</a></li>
+          <li><a href="about.html">Tietoa</a></li>
+          <li><a href="contact.html">Yhteys</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Yhteystiedot</h2>
+        <ul>
+          <li><a href="mailto:junordman@gmail.com">junordman@gmail.com</a></li>
+          <li><a href="tel:+358452249789">045 224 9789</a></li>
+          <li>Helsinki, Suomi</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap site-footer__bottom">
+      <p>© 2026 JN design, Julius Nordman</p>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

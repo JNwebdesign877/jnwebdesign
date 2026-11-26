@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tjänster och priser | JN design</title>
+  <meta name="description" content="Tre webbplatspaket med fasta priser: ensidig 350 €, webbplats för småföretag 550 € och större webbplats från 800 €.">
+  <meta name="author" content="Julius Nordman">
+  <meta name="theme-color" content="#e9ecee">
+  <link rel="canonical" href="https://jnwebdesign.com/sv/services.html">
+  <link rel="alternate" hreflang="fi" href="https://jnwebdesign.com/services.html">
+  <link rel="alternate" hreflang="sv" href="https://jnwebdesign.com/sv/services.html">
+  <link rel="alternate" hreflang="en" href="https://jnwebdesign.com/en/services.html">
+  <link rel="alternate" hreflang="x-default" href="https://jnwebdesign.com/services.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JN design">
+  <meta property="og:title" content="Tjänster och priser | JN design">
+  <meta property="og:description" content="Tre webbplatspaket med fasta priser: ensidig 350 €, webbplats för småföretag 550 € och större webbplats från 800 €.">
+  <meta property="og:url" content="https://jnwebdesign.com/sv/services.html">
+  <meta property="og:locale" content="sv_FI">
+  <link rel="icon" type="image/png" href="../assets/img/jn-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Schibsted+Grotesk:wght@400..800&display=swap">
+  <link rel="stylesheet" href="../assets/vendor/lenis.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('jn-motion', '1');
+        else force = sessionStorage.getItem('jn-motion') === '1';
+      } catch (e) {}
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body class="page-services">
+  <a class="skip-link" href="#main">Hoppa till innehållet</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html" aria-label="JN design, startsida">
+        <img src="../assets/img/jn-logo.png" width="728" height="600" alt="">
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Meny">
+        <ul class="site-nav__links">
+          <li><a href="work.html">Arbeten</a></li>
+          <li><a href="services.html" aria-current="page">Tjänster</a></li>
+          <li><a href="about.html">Om</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+        <ul class="lang" aria-label="Språk">
+          <li><a href="../services.html" hreflang="fi" lang="fi">FI</a></li>
+          <li><a href="../sv/services.html" hreflang="sv" lang="sv" aria-current="true">SV</a></li>
+          <li><a href="../en/services.html" hreflang="en" lang="en">EN</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--small site-header__cta" href="contact.html">Be om offert</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Meny</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section page-head">
+      <div class="wrap">
+        <h1 class="page-title">Tjänster och priser</h1>
+        <p class="page-lead">Tre paket med fasta priser. Varje webbplats designas och kodas från början till slut för just ditt företag.</p>
+      </div>
+    </section>
+
+    <section class="section packages packages--full">
+      <div class="wrap">
+        <div class="pk-grid">
+          <article class="pk">
+            <h2 class="pk__name">Ensidig</h2>
+            <p class="pk__price">350 €</p>
+            <p class="pk__text">En tydlig sida som berättar vem du är och hur man når dig.</p>
+            <ul class="pk__list"><li>Upp till 6 sektioner på en sida</li><li>Kontaktformulär</li><li>Fungerar på mobil och dator</li><li>Publicering och domänkoppling</li></ul>
+            <a class="btn btn--ghost pk__btn" href="contact.html?package=1">Välj det här</a>
+          </article>
+          <article class="pk pk--featured">
+            <h2 class="pk__name">Webbplats för småföretag</h2>
+            <p class="pk__price">550 €</p>
+            <p class="pk__text">Några sidor för tjänster, priser och kontaktuppgifter.</p>
+            <ul class="pk__list"><li>Upp till 5 sidor</li><li>Allt i det ensidiga paketet</li><li>Grundläggande sökmotoroptimering: rubriker, beskrivningar och webbplatskarta</li></ul>
+            <a class="btn btn--primary pk__btn" href="contact.html?package=2">Välj det här</a>
+          </article>
+          <article class="pk">
+            <h2 class="pk__name">Större webbplats</h2>
+            <p class="pk__price">från 800 €</p>
+            <p class="pk__text">En större webbplats, flera språk och egna animationer.</p>
+            <ul class="pk__list"><li>Upp till 10 sidor</li><li>2 eller 3 språk</li><li>Egna animationer</li><li>Allt i webbplatsen för småföretag</li></ul>
+            <a class="btn btn--ghost pk__btn" href="contact.html?package=3">Välj det här</a>
+          </article>
+        </div>
+
+        <div class="included">
+          <h2>Ingår alltid</h2>
+          <ul>
+            <li>Design och ett uttryck som passar ditt varumärke</li><li>Responsiv utveckling för mobil och dator</li><li>Snabba laddningstider och optimering</li><li>Kontaktformulär och analys</li><li>Publicering, domänkoppling och genomgång</li>
+          </ul>
+          <p class="included__terms">Priset avtalas alltid i förväg. Inga dolda kostnader, ingen månadsbindning.</p>
+        </div>
+
+        <div class="other">
+          <div>
+            <h2>Behöver du något annat?</h2>
+            <p>En omdesign eller något mellan paketen? Berätta vad du behöver så gör jag en offert.</p>
+          </div>
+          <a class="btn btn--ghost" href="contact.html?package=4">Be om offert</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">
+        <img class="site-footer__logo" src="../assets/img/jn-logo.png" width="728" height="600" alt="JN design">
+        <p>Tydliga webbplatser för små företag från Helsingfors.</p>
+      </div>
+      <div>
+        <h2>Sidor</h2>
+        <ul>
+          <li><a href="work.html">Arbeten</a></li>
+          <li><a href="services.html">Tjänster</a></li>
+          <li><a href="about.html">Om</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Kontaktuppgifter</h2>
+        <ul>
+          <li><a href="mailto:junordman@gmail.com">junordman@gmail.com</a></li>
+          <li><a href="tel:+358452249789">045 224 9789</a></li>
+          <li>Helsingfors, Finland</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap site-footer__bottom">
+      <p>© 2026 JN design, Julius Nordman</p>
+    </div>
+  </footer>
+
+  <script src="../assets/vendor/gsap.min.js"></script>
+  <script src="../assets/vendor/lenis.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

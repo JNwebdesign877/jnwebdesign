@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>G-Class Concept</title>
+  <meta name="description" content="An unofficial design study for the Mercedes-Benz G-Class: the G 550, the electric G 580 and the AMG G 63.">
+  <meta name="author" content="Julius Nordman, JN Design">
+  <meta name="theme-color" content="#1b1e21">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="stylesheet" href="assets/vendor/lenis.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preload" as="image" media="(min-width: 701px)" href="assets/img/hero-alps-1800.jpg" imagesrcset="assets/img/hero-alps-900.jpg 900w, assets/img/hero-alps-1800.jpg 1800w, assets/img/hero-alps-2600.jpg 2600w" imagesizes="100vw">
+  <link rel="preload" as="image" media="(max-width: 700px)" href="assets/img/tunnel-900.jpg" imagesrcset="assets/img/tunnel-900.jpg 900w, assets/img/tunnel-1800.jpg 1800w" imagesizes="100vw">
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('gclass-motion', '1');
+        else force = sessionStorage.getItem('gclass-motion') === '1';
+      } catch (e) {}
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body class="is-home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="wordmark" href="index.html" aria-label="G-Class, home">G-Class</a>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="models.html">Models</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="g-turn.html">G-TURN</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--small site-header__cta" href="test-drive.html">Book a test drive</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <picture>
+          <source media="(max-width: 700px)"
+                  srcset="assets/img/tunnel-900.jpg 900w, assets/img/tunnel-1800.jpg 1800w"
+                  sizes="100vw" width="1800" height="2700">
+          <img src="assets/img/hero-alps-1800.jpg"
+               srcset="assets/img/hero-alps-900.jpg 900w, assets/img/hero-alps-1800.jpg 1800w, assets/img/hero-alps-2600.jpg 2600w"
+               sizes="100vw" width="2600" height="1463"
+               alt="A black G-Class on wet tarmac in front of snow-covered mountains">
+        </picture>
+      </div>
+      <div class="hero__content wrap">
+        <h1 id="hero-title" class="hero__title">
+          <span class="hero__line"><span>Square</span></span>
+          <span class="hero__line"><span>since 1979.</span></span>
+        </h1>
+        <div class="hero__aside">
+          <p class="hero__sub">Built in Graz, Austria, on a ladder frame, with upright glass and door hinges you can see. Today you choose a straight-six, four electric motors or a hand-built AMG V8.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="models.html">Compare the three models</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">
+        <a class="wordmark" href="index.html">G-Class</a>
+        <p class="site-footer__credit">Designed and built by Julius Nordman, JN Design.</p>
+        <p>An unofficial design study made for a portfolio. Not affiliated with or endorsed by Mercedes-Benz. G-Class, G 550, G 580 and AMG are trademarks of Mercedes-Benz Group AG.</p>
+      </div>
+      <div class="site-footer__col">
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="https://www.mbusa.com/en/vehicles/class/g-class/suv">Model specs and prices, mbusa.com</a></li>
+          <li><a href="https://media.mbusa.com/news/the-gelandewagen-electrified">G 580 off-road figures, Mercedes-Benz USA press</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class">History, Wikipedia</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Photos on Unsplash</h2>
+        <ul>
+          <li><a href="https://unsplash.com/photos/black-suv-before-snowy-mountains-xZJ6uV5F4_k">Mountains and wet track, D Panyukov</a></li>
+          <li><a href="https://unsplash.com/photos/black-suv-with-glowing-headlight-2o_rxu8morY">Headlight, Rico Reynaldi</a></li>
+          <li><a href="https://unsplash.com/photos/grayscale-photo-of-suv-parked-beside-wall-Sa5lP-M-RGo">Rear view, Endri Killo</a></li>
+          <li><a href="https://unsplash.com/photos/black-mercedes-benz-g-class-in-tunnel-qfniR1cYiOI">Underpass, Alexis AMZ DA CRUZ</a></li>
+          <li><a href="https://unsplash.com/photos/black-mercedes-g-wagon-parked-on-textured-pavement-outdoors-f9XVp_zBvbo">Autumn fog, Tim Vegas</a></li>
+          <li><a href="https://unsplash.com/photos/silver-mercedes-benz-g-class-near-table-mountain-PtJDCD4fTI4">Cape Town, Gilles De Muynck</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

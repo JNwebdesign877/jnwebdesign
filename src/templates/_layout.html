@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="{{html_lang}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{desc}}">
+  <meta name="author" content="Julius Nordman">
+  <meta name="theme-color" content="#e9ecee">
+  <link rel="canonical" href="{{abs_self}}">
+  <link rel="alternate" hreflang="fi" href="{{abs_fi}}">
+  <link rel="alternate" hreflang="sv" href="{{abs_sv}}">
+  <link rel="alternate" hreflang="en" href="{{abs_en}}">
+  <link rel="alternate" hreflang="x-default" href="{{abs_fi}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JN design">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{desc}}">
+  <meta property="og:url" content="{{abs_self}}">
+  <meta property="og:locale" content="{{og_locale}}">
+  <link rel="icon" type="image/png" href="{{base}}assets/img/jn-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Schibsted+Grotesk:wght@400..800&display=swap">
+  <link rel="stylesheet" href="{{base}}assets/vendor/lenis.css">
+  <link rel="stylesheet" href="{{base}}assets/css/style.css">
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('jn-motion', '1');
+        else force = sessionStorage.getItem('jn-motion') === '1';
+      } catch (e) {}
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body class="page-{{page}}">
+  <a class="skip-link" href="#main">{{skip}}</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html" aria-label="{{home_label}}">
+        <img src="{{base}}assets/img/jn-logo.png" width="728" height="600" alt="">
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="{{menu}}">
+        <ul class="site-nav__links">
+          <li><a href="work.html"{{cur_work}}>{{nav_work}}</a></li>
+          <li><a href="services.html"{{cur_services}}>{{nav_services}}</a></li>
+          <li><a href="about.html"{{cur_about}}>{{nav_about}}</a></li>
+          <li><a href="contact.html"{{cur_contact}}>{{nav_contact}}</a></li>
+        </ul>
+        <ul class="lang" aria-label="{{lang_label}}">
+          <li><a href="{{href_fi}}" hreflang="fi" lang="fi"{{curlang_fi}}>FI</a></li>
+          <li><a href="{{href_sv}}" hreflang="sv" lang="sv"{{curlang_sv}}>SV</a></li>
+          <li><a href="{{href_en}}" hreflang="en" lang="en"{{curlang_en}}>EN</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--small site-header__cta" href="contact.html">{{cta_quote}}</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">{{menu}}</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+{{content}}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">
+        <img class="site-footer__logo" src="{{base}}assets/img/jn-logo.png" width="728" height="600" alt="JN design">
+        <p>{{footer_line}}</p>
+      </div>
+      <div>
+        <h2>{{footer_pages}}</h2>
+        <ul>
+          <li><a href="work.html">{{nav_work}}</a></li>
+          <li><a href="services.html">{{nav_services}}</a></li>
+          <li><a href="about.html">{{nav_about}}</a></li>
+          <li><a href="contact.html">{{nav_contact}}</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>{{footer_contact}}</h2>
+        <ul>
+          <li><a href="mailto:junordman@gmail.com">junordman@gmail.com</a></li>
+          <li><a href="tel:+358452249789">045 224 9789</a></li>
+          <li>{{location}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap site-footer__bottom">
+      <p>{{rights}}</p>
+    </div>
+  </footer>
+
+  <script src="{{base}}assets/vendor/gsap.min.js"></script>
+  <script src="{{base}}assets/vendor/lenis.min.js"></script>
+  <script src="{{base}}assets/js/main.js"></script>
+</body>
+</html>

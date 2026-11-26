@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | JN design</title>
+  <meta name="description" content="Tell me about your project. I usually reply the same day.">
+  <meta name="author" content="Julius Nordman">
+  <meta name="theme-color" content="#e9ecee">
+  <link rel="canonical" href="https://jnwebdesign.com/en/contact.html">
+  <link rel="alternate" hreflang="fi" href="https://jnwebdesign.com/contact.html">
+  <link rel="alternate" hreflang="sv" href="https://jnwebdesign.com/sv/contact.html">
+  <link rel="alternate" hreflang="en" href="https://jnwebdesign.com/en/contact.html">
+  <link rel="alternate" hreflang="x-default" href="https://jnwebdesign.com/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JN design">
+  <meta property="og:title" content="Contact | JN design">
+  <meta property="og:description" content="Tell me about your project. I usually reply the same day.">
+  <meta property="og:url" content="https://jnwebdesign.com/en/contact.html">
+  <meta property="og:locale" content="en_GB">
+  <link rel="icon" type="image/png" href="../assets/img/jn-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Schibsted+Grotesk:wght@400..800&display=swap">
+  <link rel="stylesheet" href="../assets/vendor/lenis.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('jn-motion', '1');
+        else force = sessionStorage.getItem('jn-motion') === '1';
+      } catch (e) {}
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body class="page-contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html" aria-label="JN design, home">
+        <img src="../assets/img/jn-logo.png" width="728" height="600" alt="">
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Menu">
+        <ul class="site-nav__links">
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+        <ul class="lang" aria-label="Language">
+          <li><a href="../contact.html" hreflang="fi" lang="fi">FI</a></li>
+          <li><a href="../sv/contact.html" hreflang="sv" lang="sv">SV</a></li>
+          <li><a href="../en/contact.html" hreflang="en" lang="en" aria-current="true">EN</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--small site-header__cta" href="contact.html">Get a quote</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section contact">
+      <div class="wrap contact__grid">
+        <div class="contact__intro">
+          <h1 class="page-title">Get in touch</h1>
+          <p class="page-lead">Tell me briefly about your project. I usually reply the same day.</p>
+          <div class="direct">
+            <h2>Direct contact</h2>
+            <ul>
+              <li><a href="mailto:junordman@gmail.com">junordman@gmail.com</a></li>
+              <li><a href="tel:+358452249789">045 224 9789</a></li>
+              <li>Helsinki, Finland</li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate
+              data-err-req="Fill in this field." data-err-email="Enter an email address like name@example.com." data-err-check="Check the highlighted fields."
+              data-sending="Sending…" data-sent="Thanks, your message is on its way. I usually reply the same day." data-fail="Your message couldn't be sent. Email it to junordman@gmail.com instead.">
+          <!-- Web3Forms sends each message to Julius's email. The access key is public by design. -->
+          <input type="hidden" name="access_key" value="PASTE_WEB3FORMS_ACCESS_KEY_HERE">
+          <input type="hidden" name="subject" value="Yhteydenotto jnwebdesign.com (en)">
+          <input type="hidden" name="from_name" value="jnwebdesign.com">
+          <input type="hidden" name="language" value="en">
+          <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form__row">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-type">What do you need?</label>
+            <select id="f-type" name="project" required>
+              <option value="">Choose</option>
+              <option value="1">One-page (€350)</option>
+              <option value="2">Small business site (€550)</option>
+              <option value="3">Larger site (from €800)</option>
+              <option value="4">Redesign</option>
+              <option value="5">Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" rows="6" required aria-describedby="f-msg-hint"></textarea>
+            <p class="field__hint" id="f-msg-hint">For example what kind of business, which pages you need and when.</p>
+          </div>
+          <div class="form__footer">
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </div>
+          <p class="form__privacy">I only use your details to reply to your message.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">
+        <img class="site-footer__logo" src="../assets/img/jn-logo.png" width="728" height="600" alt="JN design">
+        <p>Clear websites for small businesses, from Helsinki.</p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:junordman@gmail.com">junordman@gmail.com</a></li>
+          <li><a href="tel:+358452249789">045 224 9789</a></li>
+          <li>Helsinki, Finland</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap site-footer__bottom">
+      <p>© 2026 JN design, Julius Nordman</p>
+    </div>
+  </footer>
+
+  <script src="../assets/vendor/gsap.min.js"></script>
+  <script src="../assets/vendor/lenis.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

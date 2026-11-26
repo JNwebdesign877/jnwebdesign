@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test drive | G-Class Concept</title>
+  <meta name="description" content="Request a G-Class test drive.">
+  <meta name="author" content="Julius Nordman, JN Design">
+  <meta name="theme-color" content="#1b1e21">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="stylesheet" href="assets/vendor/lenis.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('gclass-motion', '1');
+        else force = sessionStorage.getItem('gclass-motion') === '1';
+      } catch (e) {}
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body class="is-inner">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="wordmark" href="index.html" aria-label="G-Class, home">G-Class</a>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="models.html">Models</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="g-turn.html">G-TURN</a></li>
+          <li><a href="heritage.html">Heritage</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary btn--small site-header__cta" href="test-drive.html" aria-current="page">Book a test drive</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <section class="section booking" aria-labelledby="booking-title">
+      <div class="wrap booking__layout">
+        <div class="booking__intro">
+          <h1 id="booking-title" class="page-title">Book a test drive.</h1>
+          <p>Tell us which G you want to drive and when. A product specialist confirms the time and the dealer by email.</p>
+        </div>
+
+        <form class="form" id="booking-form" novalidate>
+          <div class="form__row">
+            <div class="field">
+              <label for="f-first">First name</label>
+              <input id="f-first" name="first" type="text" autocomplete="given-name" required>
+            </div>
+            <div class="field">
+              <label for="f-last">Last name</label>
+              <input id="f-last" name="last" type="text" autocomplete="family-name" required>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="f-zip">ZIP code <span class="field__hint">for the nearest dealer</span></label>
+              <input id="f-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}" maxlength="5" required>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="field">
+              <label for="f-model">Model</label>
+              <select id="f-model" name="model" required>
+                <option value="">Choose a model</option>
+                <option>G 550</option>
+                <option>G 580 with EQ Technology</option>
+                <option>AMG G 63</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-date">Preferred date</label>
+              <input id="f-date" name="date" type="date" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-notes">Anything we should know? <span class="field__hint">optional</span></label>
+            <textarea id="f-notes" name="notes" rows="4"></textarea>
+          </div>
+          <div class="form__footer">
+            <button class="btn btn--primary" type="submit">Request test drive</button>
+            <p class="form__status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">
+        <a class="wordmark" href="index.html">G-Class</a>
+        <p class="site-footer__credit">Designed and built by Julius Nordman, JN Design.</p>
+        <p>An unofficial design study made for a portfolio. Not affiliated with or endorsed by Mercedes-Benz. G-Class, G 550, G 580 and AMG are trademarks of Mercedes-Benz Group AG.</p>
+      </div>
+      <div class="site-footer__col">
+        <h2>Sources</h2>
+        <ul>
+          <li><a href="https://www.mbusa.com/en/vehicles/class/g-class/suv">Model specs and prices, mbusa.com</a></li>
+          <li><a href="https://media.mbusa.com/news/the-gelandewagen-electrified">G 580 off-road figures, Mercedes-Benz USA press</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Mercedes-Benz_G-Class">History, Wikipedia</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2>Photos on Unsplash</h2>
+        <ul>
+          <li><a href="https://unsplash.com/photos/black-suv-before-snowy-mountains-xZJ6uV5F4_k">Mountains and wet track, D Panyukov</a></li>
+          <li><a href="https://unsplash.com/photos/black-suv-with-glowing-headlight-2o_rxu8morY">Headlight, Rico Reynaldi</a></li>
+          <li><a href="https://unsplash.com/photos/grayscale-photo-of-suv-parked-beside-wall-Sa5lP-M-RGo">Rear view, Endri Killo</a></li>
+          <li><a href="https://unsplash.com/photos/black-mercedes-benz-g-class-in-tunnel-qfniR1cYiOI">Underpass, Alexis AMZ DA CRUZ</a></li>
+          <li><a href="https://unsplash.com/photos/black-mercedes-g-wagon-parked-on-textured-pavement-outdoors-f9XVp_zBvbo">Autumn fog, Tim Vegas</a></li>
+          <li><a href="https://unsplash.com/photos/silver-mercedes-benz-g-class-near-table-mountain-PtJDCD4fTI4">Cape Town, Gilles De Muynck</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
