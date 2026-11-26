@@ -1,6 +1,6 @@
 # Builds the static site in ..\site from templates\ and strings\.
 # Run from anywhere:  powershell -ExecutionPolicy Bypass -File src\build.ps1
-# Finnish pages go in site\, Swedish in site\sv\, English in site\en\.
+# English (the default) goes in site\, Finnish in site\fi\, Swedish in site\sv\.
 
 $ErrorActionPreference = 'Stop'
 $src   = $PSScriptRoot
@@ -8,7 +8,8 @@ $out   = Join-Path (Split-Path $src -Parent) 'site'
 $utf8  = New-Object System.Text.UTF8Encoding($false)
 $domain = 'https://jnwebdesign.com/'
 
-$langs = @('fi', 'sv', 'en')
+$langs = @('en', 'fi', 'sv')
+$default = 'en'
 $pages = @('index', 'work', 'services', 'about', 'contact')
 
 function Read-Text($path) { [IO.File]::ReadAllText($path, $utf8) }
@@ -18,7 +19,7 @@ $config = Read-Text (Join-Path $src 'config.json') | ConvertFrom-Json
 $layout = Read-Text (Join-Path $src 'templates\_layout.html')
 $cta    = Read-Text (Join-Path $src 'templates\_cta.html')
 
-function Get-LangPath($lang) { if ($lang -eq 'fi') { '' } else { "$lang/" } }
+function Get-LangPath($lang) { if ($lang -eq $default) { '' } else { "$lang/" } }
 
 $missing = @{}
 foreach ($lang in $langs) {
@@ -29,7 +30,7 @@ foreach ($lang in $langs) {
 
   $dir = Join-Path $out (Get-LangPath $lang)
   if (-not (Test-Path $dir)) { New-Item -ItemType Directory -Force $dir | Out-Null }
-  $base = if ($lang -eq 'fi') { '' } else { '../' }
+  $base = if ($lang -eq $default) { '' } else { '../' }
 
   foreach ($page in $pages) {
     $file = "$page.html"

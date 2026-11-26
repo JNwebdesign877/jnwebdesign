@@ -2,7 +2,7 @@
 
 Plain HTML, CSS and JS in three languages. No Lovable, no Node.
 
-- `site/` is the finished website, and the only folder you publish. Finnish pages are in `site/`, Swedish in `site/sv/`, English in `site/en/`.
+- `site/` is the finished website, and the only folder you publish. English (the default) is in `site/`, Finnish in `site/fi/`, Swedish in `site/sv/`.
 - `site/demos/g-class/` holds the G-Class demo. Put new demos in `site/demos/<name>/` and add a card for each one to `src/templates/work.html`.
 - `src/` holds the page templates (`templates/`) and all the text (`strings/fi.json`, `sv.json`, `en.json`).
 
