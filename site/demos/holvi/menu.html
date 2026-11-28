@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu | Holvi, Helsinki</title>
+  <meta name="description" content="This week's menu at Holvi: fish, lamb and vegetables cooked over birch, in the embers or in smoke. Fictional restaurant, portfolio demo.">
+  <meta name="author" content="Julius Nordman, JN Design">
+  <meta name="theme-color" content="#13110f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 26'%3E%3Crect width='22' height='26' fill='%2313110f'/%3E%3Cpath d='M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13' fill='none' stroke='%239db3a4' stroke-width='1.8'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&display=swap">
+  <link rel="stylesheet" href="assets/vendor/lenis.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('holvi-motion', '1');
+        else force = sessionStorage.getItem('holvi-motion') === '1';
+      } catch (e) {}
+      if (force) root.classList.add('force-motion');
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="index.html" aria-label="Holvi, home"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="menu.html" aria-current="page">Menu</a></li>
+          <li><a href="story.html">The vault</a></li>
+          <li><a href="visit.html">Hours and directions</a></li>
+          <li class="site-nav__book"><a href="visit.html#book">Book a table</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--solid btn--small site-header__cta" href="visit.html#book">Book a table</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="on-lime menu-page">
+      <section class="page-head">
+        <div class="wrap">
+          <h1 class="page-title">This week&rsquo;s menu</h1>
+          <p class="page-lead">Written every Tuesday. Everything meets the same birch fire, in one of four ways, so you can choose by that too.</p>
+        </div>
+      </section>
+      <div class="wrap">
+        <fieldset class="fire-filter" data-fire-filter>
+          <legend>Show dishes cooked</legend>
+          <button type="button" data-fire="all" aria-pressed="true">Any way</button>
+          <button type="button" data-fire="flame" aria-pressed="false">Over the flame</button>
+          <button type="button" data-fire="embers" aria-pressed="false">In the embers</button>
+          <button type="button" data-fire="smoke" aria-pressed="false">Smoked</button>
+          <button type="button" data-fire="raw" aria-pressed="false">With no fire</button>
+        </fieldset>
+        <p class="visually-hidden" data-filter-status aria-live="polite"></p>
+        <div class="menu-layout">
+          <div>
+          <section class="course" aria-label="To start">
+            <h2 class="course__title">To start</h2>
+            <ul class="dishes">
+              <li class="dish" data-fire="smoke">
+                <h3 class="dish__name">Rye bread and cultured butter <span class="dish__fi">Ruisleipä</span></h3>
+                <span class="dish__price">6 &euro;</span>
+                <p class="dish__desc">Baked here each morning, served warm with cultured butter and flaky salt.</p>
+                <span class="dish__fire">Smoked</span>
+              </li>
+              <li class="dish" data-fire="smoke">
+                <h3 class="dish__name">Hot-smoked Baltic herring <span class="dish__fi">Savusilakka</span></h3>
+                <span class="dish__price">14 &euro;</span>
+                <p class="dish__desc">Smoked over alder at the table, with egg butter and potato crisps.</p>
+                <span class="dish__fire">Smoked</span>
+              </li>
+              <li class="dish" data-fire="flame">
+                <h3 class="dish__name">Vendace fried in rye flour <span class="dish__fi">Muikut</span></h3>
+                <span class="dish__price">16 &euro;</span>
+                <p class="dish__desc">Small lake fish from Saimaa, eaten whole, with lemon and garlic mayonnaise.</p>
+                <span class="dish__fire">Over the flame</span>
+              </li>
+              <li class="dish" data-fire="embers">
+                <h3 class="dish__name">Beetroot baked in the coals <span class="dish__fi">Hiillostettu punajuuri</span></h3>
+                <span class="dish__price">15 &euro;</span>
+                <p class="dish__desc">Smoked curd, toasted rye crumbs, dill oil.</p>
+                <span class="dish__fire">In the embers</span>
+              </li>
+              <li class="dish" data-fire="raw">
+                <h3 class="dish__name">Pike-perch, cured <span class="dish__fi">Graavattu kuha</span></h3>
+                <span class="dish__price">17 &euro;</span>
+                <p class="dish__desc">Cured in salt and spruce tips, with cucumber and horseradish cream.</p>
+                <span class="dish__fire">No fire</span>
+              </li>
+            </ul>
+            <p class="menu-empty" hidden>Nothing in this course is cooked that way this week.</p>
+          </section>
+          <section class="course" aria-label="From the fire">
+            <h2 class="course__title">From the fire</h2>
+            <ul class="dishes">
+              <li class="dish" data-fire="flame">
+                <h3 class="dish__name">Whitefish over birch <span class="dish__fi">Siika</span></h3>
+                <span class="dish__price">32 &euro;</span>
+                <p class="dish__desc">Cooked on the bone, with brown butter, pickled cucumber and new potatoes.</p>
+                <span class="dish__fire">Over the flame</span>
+              </li>
+              <li class="dish" data-fire="embers">
+                <h3 class="dish__name">&Aring;land lamb shoulder <span class="dish__fi">Lampaanlapa</span></h3>
+                <span class="dish__price">36 &euro;</span>
+                <p class="dish__desc">Slow-cooked overnight beside the fire, juniper, celeriac baked in the embers.</p>
+                <span class="dish__fire">In the embers</span>
+              </li>
+              <li class="dish" data-fire="flame">
+                <h3 class="dish__name">Beef from Ruovesi <span class="dish__fi">Naudan entrecôte</span></h3>
+                <span class="dish__price">38 &euro;</span>
+                <p class="dish__desc">Grass-fed, aged four weeks, with smoked bone sauce and charred onion.</p>
+                <span class="dish__fire">Over the flame</span>
+              </li>
+              <li class="dish" data-fire="embers">
+                <h3 class="dish__name">Celeriac steak <span class="dish__fi">Juuriselleri</span></h3>
+                <span class="dish__price">27 &euro;</span>
+                <p class="dish__desc">Whole root cooked in the ashes, brown butter, hazelnuts, pickled chanterelles.</p>
+                <span class="dish__fire">In the embers</span>
+              </li>
+            </ul>
+            <p class="menu-empty" hidden>Nothing in this course is cooked that way this week.</p>
+          </section>
+          <section class="course" aria-label="After">
+            <h2 class="course__title">After</h2>
+            <ul class="dishes">
+              <li class="dish" data-fire="raw">
+                <h3 class="dish__name">Buttermilk pudding <span class="dish__fi">Piimävanukas</span></h3>
+                <span class="dish__price">12 &euro;</span>
+                <p class="dish__desc">Sea buckthorn and toasted oats.</p>
+                <span class="dish__fire">No fire</span>
+              </li>
+              <li class="dish" data-fire="embers">
+                <h3 class="dish__name">Ember-roasted apple <span class="dish__fi">Hiillostettu omena</span></h3>
+                <span class="dish__price">12 &euro;</span>
+                <p class="dish__desc">Rye ice cream and burnt honey.</p>
+                <span class="dish__fire">In the embers</span>
+              </li>
+              <li class="dish" data-fire="smoke">
+                <h3 class="dish__name">Cheese from Lapland <span class="dish__fi">Leipäjuusto</span></h3>
+                <span class="dish__price">13 &euro;</span>
+                <p class="dish__desc">Warmed by the fire, with cloudberry jam.</p>
+                <span class="dish__fire">Smoked</span>
+              </li>
+            </ul>
+            <p class="menu-empty" hidden>Nothing in this course is cooked that way this week.</p>
+          </section>
+            <p class="menu-foot">Prices include VAT. Tell us about allergies when you book and we will cook around them; most dishes can be made without gluten or dairy.</p>
+          </div>
+          <aside class="menu-side" aria-label="Tasting menu">
+            <div class="arch"><img src="assets/img/grill-1800.jpg" srcset="assets/img/grill-900.jpg 900w, assets/img/grill-1800.jpg 1800w" sizes="(max-width: 960px) 45vw, 30vw" width="1800" height="2710" alt="Meat cooking on a grill over open flames" loading="lazy" decoding="async"></div>
+            <div class="tasting">
+              <h2>By the fire</h2>
+              <p>Seven courses chosen by the kitchen on the night, served to the whole table. Ask for it when you book, by 17.00 on the day.</p>
+              <div class="tasting__price"><span>Seven courses</span><strong>79 &euro;</strong></div>
+              <div class="tasting__price"><span>With paired wines</span><strong>139 &euro;</strong></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="wordmark" href="index.html"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
+        <p>Liisankatu, Kruununhaka, Helsinki<br>Tuesday to Saturday from 17.00</p>
+        <p class="site-footer__credit">Designed and built by Julius Nordman, JN Design.</p>
+        <p>Holvi is a fictional restaurant, made as a portfolio demo. The menu, prices and history are invented. The booking form sends nothing.</p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="story.html">The vault</a></li>
+          <li><a href="visit.html">Hours and directions</a></li>
+          <li><a href="visit.html#book">Book a table</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Photos on Unsplash</h2>
+        <ul>
+          <li><a href="https://unsplash.com/photos/a-person-cooking-food-on-a-grill-in-the-dark-JKJmdRDfPfk">Cooking in the dark</a></li>
+          <li><a href="https://unsplash.com/photos/people-dining-in-a-restaurant-with-arched-stone-ceilings-NyWkEHSVLx0">Arched stone dining room</a></li>
+          <li><a href="https://unsplash.com/photos/fried-fish-on-black-round-plate-_o5mOJ3lOCA">Fish on a black plate</a></li>
+          <li><a href="https://unsplash.com/photos/person-cooking-on-grill-with-fire-Aqot8S_Keb8">Grill over fire</a></li>
+          <li><a href="https://unsplash.com/photos/chef-pouring-sauce-over-plated-steak-MaWMfm-HCqQ">Sauce at the pass</a></li>
+          <li><a href="https://unsplash.com/photos/person-holding-stainless-steel-spoon-and-fork-eating-on-black-table--g5jWce3HUQ">At the table</a></li>
+          <li><a href="https://unsplash.com/photos/a-close-up-of-a-fire-burning-in-a-stove-hwMmAIMOzxU">Fire in the stove</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="assets/vendor/lenis.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
