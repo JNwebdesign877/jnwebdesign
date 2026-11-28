@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boka bord | Holvi, Helsingfors</title>
+  <meta name="description" content="Boka bord på Holvi, öppet tisdag till lördag från 17.00 i Kronohagen, Helsingfors. Påhittad restaurang, portfoliodemo.">
+  <meta name="author" content="Julius Nordman, JN Design">
+  <meta name="theme-color" content="#13110f">
+  <link rel="alternate" hreflang="en" href="https://jnwebdesign.com/demos/holvi/visit.html">
+  <link rel="alternate" hreflang="fi" href="https://jnwebdesign.com/demos/holvi/fi/visit.html">
+  <link rel="alternate" hreflang="sv" href="https://jnwebdesign.com/demos/holvi/sv/visit.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 26'%3E%3Crect width='22' height='26' fill='%2313110f'/%3E%3Cpath d='M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13' fill='none' stroke='%239db3a4' stroke-width='1.8'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&display=swap">
+  <link rel="stylesheet" href="../assets/vendor/lenis.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=3">
+  
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('holvi-motion', '1');
+        else force = sessionStorage.getItem('holvi-motion') === '1';
+      } catch (e) {}
+      if (force) root.classList.add('force-motion');
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Hoppa till innehållet</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="index.html" aria-label="Holvi"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
+      <nav id="site-nav" class="site-nav" aria-label="Meny">
+        <ul>
+          <li><a href="menu.html">Meny</a></li>
+          <li><a href="story.html">Källaren</a></li>
+          <li><a href="visit.html" aria-current="page">Öppettider och hitta hit</a></li>
+          <li class="site-nav__book"><a href="visit.html#book">Boka bord</a></li>
+        </ul>
+      </nav>
+      <nav class="lang" aria-label="Språk"><a href="../visit.html" lang="en" hreflang="en" aria-label="English">EN</a><a href="../fi/visit.html" lang="fi" hreflang="fi" aria-label="Suomi">FI</a><a href="../sv/visit.html" lang="sv" hreflang="sv" aria-label="Svenska" aria-current="true">SV</a></nav>
+      <a class="btn btn--solid btn--small site-header__cta" href="visit.html#book">Boka bord</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Meny</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <h1 class="page-title">Boka bord</h1>
+        <p class="page-lead">För upp till sex personer. För sju eller fler, eller hela valvet, skriv till oss så planerar vi det tillsammans.</p>
+      </div>
+    </section>
+
+    <div class="wrap visit-grid">
+      <section id="book" aria-labelledby="book-title">
+        <h2 id="book-title" class="panel-title">Ditt bord</h2>
+        <form id="book-form" class="form" novalidate>
+          <div class="field">
+            <label for="date">Datum</label>
+            <input id="date" name="date" type="date" required aria-describedby="date-hint date-error">
+            <span id="date-hint" class="field__hint">Tisdag till lördag</span>
+            <span id="date-error" class="field__error"></span>
+          </div>
+          <div class="field">
+            <label for="time">Tid</label>
+            <select id="time" name="time" required aria-describedby="time-error"><option value="">Välj en tid</option><option>17.00</option><option>17.30</option><option>18.00</option><option>18.30</option><option>19.00</option><option>19.30</option><option>20.00</option><option>20.30</option><option>21.00</option><option>21.30</option></select>
+            <span id="time-error" class="field__error"></span>
+          </div>
+          <div class="field">
+            <label for="guests">Gäster</label>
+            <select id="guests" name="guests" required aria-describedby="guests-error"><option value="">Hur många?</option><option>1 gäst</option><option>2 gäster</option><option>3 gäster</option><option>4 gäster</option><option>5 gäster</option><option>6 gäster</option></select>
+            <span id="guests-error" class="field__error"></span>
+          </div>
+          <div class="field">
+            <label for="name">Namn</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+            <span id="name-error" class="field__error"></span>
+          </div>
+          <div class="field field--full">
+            <label for="email">E-post</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="namn@example.com" aria-describedby="email-error">
+            <span id="email-error" class="field__error"></span>
+          </div>
+          <div class="field field--full">
+            <label for="notes">Allergier eller annat vi borde veta <span class="field__hint">(valfritt)</span></label>
+            <textarea id="notes" name="notes"></textarea>
+          </div>
+          <div class="form__actions">
+            <button class="btn btn--solid" type="submit">Skicka bordsförfrågan <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5.5 15.5 10 11 14.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+            <p class="form__note">Det här är en demo. Inget skickas.</p>
+          </div>
+        </form>
+        <div id="book-done" class="form-done" tabindex="-1" hidden>
+          <h3>Din förfrågan är mottagen</h3>
+          <p><span data-summary></span> I en riktig bokning skulle vi bekräfta via e-post inom en timme. Den här demon skickar ingenting.</p>
+        </div>
+      </section>
+
+      <aside class="visit-side" aria-label="Öppettider och hitta hit">
+        <section aria-labelledby="hours-title">
+          <h2 id="hours-title" class="panel-title">Öppettider</h2>
+          <table class="hours" data-hours>
+            <caption class="visually-hidden">Öppettider, köket stänger en timme tidigare</caption>
+            <tbody>
+              <tr data-day="1"><th scope="row">Måndag</th><td>Stängt</td></tr>
+              <tr data-day="2"><th scope="row">Tisdag</th><td>17.00–23.00</td></tr>
+              <tr data-day="3"><th scope="row">Onsdag</th><td>17.00–23.00</td></tr>
+              <tr data-day="4"><th scope="row">Torsdag</th><td>17.00–23.00</td></tr>
+              <tr data-day="5"><th scope="row">Fredag</th><td>17.00–00.00</td></tr>
+              <tr data-day="6"><th scope="row">Lördag</th><td>17.00–00.00</td></tr>
+              <tr data-day="0"><th scope="row">Söndag</th><td>Stängt</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:1rem">Köket tar sista beställningarna en timme innan vi stänger.</p>
+        </section>
+        <section aria-labelledby="find-title">
+          <h2 id="find-title" class="panel-title">Hitta hit</h2>
+          <address class="address">Holvi<br>Elisabetsgatan, Kronohagen<br>Helsingfors</address>
+          <p style="margin-top:1rem">Tio minuters promenad nordost om Domkyrkan. Leta efter järndörren sex granittrappsteg ner. Valvet har ingen hiss; säg till om trappor är svåra så hjälper vi dig ner.</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="wordmark" href="index.html"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
+        <p>Elisabetsgatan, Kronohagen, Helsingfors<br>Tisdag till lördag från 17.00</p>
+        <p class="site-footer__credit">Designad och byggd av Julius Nordman, JN Design.</p>
+        <p>Holvi är en påhittad restaurang, gjord som portfoliodemo. Menyn, priserna och historien är uppdiktade. Bokningsformuläret skickar ingenting.</p>
+      </div>
+      <div>
+        <h2>Sidor</h2>
+        <ul>
+          <li><a href="menu.html">Meny</a></li>
+          <li><a href="story.html">Källaren</a></li>
+          <li><a href="visit.html">Öppettider och hitta hit</a></li>
+          <li><a href="visit.html#book">Boka bord</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Foton från Unsplash</h2>
+        <ul>
+          <li><a href="https://unsplash.com/photos/a-person-cooking-food-on-a-grill-in-the-dark-JKJmdRDfPfk">Matlagning i mörkret</a></li>
+          <li><a href="https://unsplash.com/photos/people-dining-in-a-restaurant-with-arched-stone-ceilings-NyWkEHSVLx0">Matsal med stenvalv</a></li>
+          <li><a href="https://unsplash.com/photos/fried-fish-on-black-round-plate-_o5mOJ3lOCA">Fisk på svart fat</a></li>
+          <li><a href="https://unsplash.com/photos/person-cooking-on-grill-with-fire-Aqot8S_Keb8">Grill över eld</a></li>
+          <li><a href="https://unsplash.com/photos/chef-pouring-sauce-over-plated-steak-MaWMfm-HCqQ">Sås vid passet</a></li>
+          <li><a href="https://unsplash.com/photos/person-holding-stainless-steel-spoon-and-fork-eating-on-black-table--g5jWce3HUQ">Vid bordet</a></li>
+          <li><a href="https://unsplash.com/photos/a-close-up-of-a-fire-burning-in-a-stove-hwMmAIMOzxU">Eld i kaminen</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/vendor/gsap.min.js" defer></script>
+  <script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/vendor/lenis.min.js" defer></script>
+  <script src="../assets/js/main.js?v=3" defer></script>
+</body>
+</html>

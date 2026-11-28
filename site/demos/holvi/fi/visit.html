@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Varaa pöytä | Holvi, Helsinki</title>
+  <meta name="description" content="Varaa pöytä Holvista, avoinna tiistaista lauantaihin klo 17.00 alkaen Kruununhaassa. Kuvitteellinen ravintola, portfoliodemo.">
+  <meta name="author" content="Julius Nordman, JN Design">
+  <meta name="theme-color" content="#13110f">
+  <link rel="alternate" hreflang="en" href="https://jnwebdesign.com/demos/holvi/visit.html">
+  <link rel="alternate" hreflang="fi" href="https://jnwebdesign.com/demos/holvi/fi/visit.html">
+  <link rel="alternate" hreflang="sv" href="https://jnwebdesign.com/demos/holvi/sv/visit.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 26'%3E%3Crect width='22' height='26' fill='%2313110f'/%3E%3Cpath d='M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13' fill='none' stroke='%239db3a4' stroke-width='1.8'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&display=swap">
+  <link rel="stylesheet" href="../assets/vendor/lenis.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=3">
+  
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('holvi-motion', '1');
+        else force = sessionStorage.getItem('holvi-motion') === '1';
+      } catch (e) {}
+      if (force) root.classList.add('force-motion');
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="index.html" aria-label="Holvi"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
+      <nav id="site-nav" class="site-nav" aria-label="Valikko">
+        <ul>
+          <li><a href="menu.html">Ruokalista</a></li>
+          <li><a href="story.html">Kellari</a></li>
+          <li><a href="visit.html" aria-current="page">Aukioloajat ja sijainti</a></li>
+          <li class="site-nav__book"><a href="visit.html#book">Varaa pöytä</a></li>
+        </ul>
+      </nav>
+      <nav class="lang" aria-label="Kieli"><a href="../visit.html" lang="en" hreflang="en" aria-label="English">EN</a><a href="../fi/visit.html" lang="fi" hreflang="fi" aria-label="Suomi" aria-current="true">FI</a><a href="../sv/visit.html" lang="sv" hreflang="sv" aria-label="Svenska">SV</a></nav>
+      <a class="btn btn--solid btn--small site-header__cta" href="visit.html#book">Varaa pöytä</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Valikko</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <h1 class="page-title">Varaa pöytä</h1>
+        <p class="page-lead">Enintään kuudelle. Jos teitä on seitsemän tai enemmän, tai haluat koko holvin, kirjoita meille, niin suunnitellaan yhdessä.</p>
+      </div>
+    </section>
+
+    <div class="wrap visit-grid">
+      <section id="book" aria-labelledby="book-title">
+        <h2 id="book-title" class="panel-title">Pöytäsi</h2>
+        <form id="book-form" class="form" novalidate>
+          <div class="field">
+            <label for="date">Päivä</label>
+            <input id="date" name="date" type="date" required aria-describedby="date-hint date-error">
+            <span id="date-hint" class="field__hint">Tiistaista lauantaihin</span>
+            <span id="date-error" class="field__error"></span>
+          </div>
+          <div class="field">
+            <label for="time">Aika</label>
+            <select id="time" name="time" required aria-describedby="time-error"><option value="">Valitse aika</option><option>17.00</option><option>17.30</option><option>18.00</option><option>18.30</option><option>19.00</option><option>19.30</option><option>20.00</option><option>20.30</option><option>21.00</option><option>21.30</option></select>
+            <span id="time-error" class="field__error"></span>
+          </div>
+          <div class="field">
+            <label for="guests">Vieraita</label>
+            <select id="guests" name="guests" required aria-describedby="guests-error"><option value="">Kuinka monta?</option><option>1 vieras</option><option>2 vierasta</option><option>3 vierasta</option><option>4 vierasta</option><option>5 vierasta</option><option>6 vierasta</option></select>
+            <span id="guests-error" class="field__error"></span>
+          </div>
+          <div class="field">
+            <label for="name">Nimi</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+            <span id="name-error" class="field__error"></span>
+          </div>
+          <div class="field field--full">
+            <label for="email">Sähköposti</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="nimi@example.com" aria-describedby="email-error">
+            <span id="email-error" class="field__error"></span>
+          </div>
+          <div class="field field--full">
+            <label for="notes">Allergiat tai muuta, mitä meidän pitäisi tietää <span class="field__hint">(valinnainen)</span></label>
+            <textarea id="notes" name="notes"></textarea>
+          </div>
+          <div class="form__actions">
+            <button class="btn btn--solid" type="submit">Lähetä pöytäpyyntö <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5.5 15.5 10 11 14.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+            <p class="form__note">Tämä on demo. Mitään ei lähetetä.</p>
+          </div>
+        </form>
+        <div id="book-done" class="form-done" tabindex="-1" hidden>
+          <h3>Pyyntösi on vastaanotettu</h3>
+          <p><span data-summary></span> Oikeassa varauksessa vahvistaisimme sen sähköpostilla tunnin sisällä. Tämä demo ei lähetä mitään.</p>
+        </div>
+      </section>
+
+      <aside class="visit-side" aria-label="Aukioloajat ja sijainti">
+        <section aria-labelledby="hours-title">
+          <h2 id="hours-title" class="panel-title">Aukioloajat</h2>
+          <table class="hours" data-hours>
+            <caption class="visually-hidden">Aukioloajat, keittiö sulkeutuu tuntia aiemmin</caption>
+            <tbody>
+              <tr data-day="1"><th scope="row">Maanantai</th><td>Suljettu</td></tr>
+              <tr data-day="2"><th scope="row">Tiistai</th><td>17.00–23.00</td></tr>
+              <tr data-day="3"><th scope="row">Keskiviikko</th><td>17.00–23.00</td></tr>
+              <tr data-day="4"><th scope="row">Torstai</th><td>17.00–23.00</td></tr>
+              <tr data-day="5"><th scope="row">Perjantai</th><td>17.00–00.00</td></tr>
+              <tr data-day="6"><th scope="row">Lauantai</th><td>17.00–00.00</td></tr>
+              <tr data-day="0"><th scope="row">Sunnuntai</th><td>Suljettu</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:1rem">Keittiö ottaa viimeiset tilaukset tuntia ennen sulkemista.</p>
+        </section>
+        <section aria-labelledby="find-title">
+          <h2 id="find-title" class="panel-title">Näin löydät meille</h2>
+          <address class="address">Holvi<br>Liisankatu, Kruununhaka<br>Helsinki</address>
+          <p style="margin-top:1rem">Kymmenen minuutin kävely Tuomiokirkolta koilliseen. Etsi rautaovi kuuden graniittiportaan alta. Holvissa ei ole hissiä; kerro, jos portaat ovat hankalia, niin autamme sinut alas.</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="wordmark" href="index.html"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
+        <p>Liisankatu, Kruununhaka, Helsinki<br>Tiistaista lauantaihin klo 17.00 alkaen</p>
+        <p class="site-footer__credit">Suunnitellut ja toteuttanut Julius Nordman, JN Design.</p>
+        <p>Holvi on kuvitteellinen ravintola, tehty portfoliodemoksi. Ruokalista, hinnat ja historia ovat keksittyjä. Varauslomake ei lähetä mitään.</p>
+      </div>
+      <div>
+        <h2>Sivut</h2>
+        <ul>
+          <li><a href="menu.html">Ruokalista</a></li>
+          <li><a href="story.html">Kellari</a></li>
+          <li><a href="visit.html">Aukioloajat ja sijainti</a></li>
+          <li><a href="visit.html#book">Varaa pöytä</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Kuvat Unsplashista</h2>
+        <ul>
+          <li><a href="https://unsplash.com/photos/a-person-cooking-food-on-a-grill-in-the-dark-JKJmdRDfPfk">Ruoanlaittoa pimeässä</a></li>
+          <li><a href="https://unsplash.com/photos/people-dining-in-a-restaurant-with-arched-stone-ceilings-NyWkEHSVLx0">Kiviholvinen ruokasali</a></li>
+          <li><a href="https://unsplash.com/photos/fried-fish-on-black-round-plate-_o5mOJ3lOCA">Kala mustalla lautasella</a></li>
+          <li><a href="https://unsplash.com/photos/person-cooking-on-grill-with-fire-Aqot8S_Keb8">Grilli tulen päällä</a></li>
+          <li><a href="https://unsplash.com/photos/chef-pouring-sauce-over-plated-steak-MaWMfm-HCqQ">Kastike annokselle</a></li>
+          <li><a href="https://unsplash.com/photos/person-holding-stainless-steel-spoon-and-fork-eating-on-black-table--g5jWce3HUQ">Pöydän ääressä</a></li>
+          <li><a href="https://unsplash.com/photos/a-close-up-of-a-fire-burning-in-a-stove-hwMmAIMOzxU">Tuli kamiinassa</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/vendor/gsap.min.js" defer></script>
+  <script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/vendor/lenis.min.js" defer></script>
+  <script src="../assets/js/main.js?v=3" defer></script>
+</body>
+</html>

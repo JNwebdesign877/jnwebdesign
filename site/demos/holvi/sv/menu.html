@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meny | Holvi, Helsingfors</title>
+  <meta name="description" content="Veckans meny på Holvi: fisk, lamm och grönsaker över björkeld, i glöden eller i rök. Påhittad restaurang, portfoliodemo.">
+  <meta name="author" content="Julius Nordman, JN Design">
+  <meta name="theme-color" content="#13110f">
+  <link rel="alternate" hreflang="en" href="https://jnwebdesign.com/demos/holvi/menu.html">
+  <link rel="alternate" hreflang="fi" href="https://jnwebdesign.com/demos/holvi/fi/menu.html">
+  <link rel="alternate" hreflang="sv" href="https://jnwebdesign.com/demos/holvi/sv/menu.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 26'%3E%3Crect width='22' height='26' fill='%2313110f'/%3E%3Cpath d='M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13' fill='none' stroke='%239db3a4' stroke-width='1.8'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&display=swap">
+  <link rel="stylesheet" href="../assets/vendor/lenis.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=3">
+  
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('holvi-motion', '1');
+        else force = sessionStorage.getItem('holvi-motion') === '1';
+      } catch (e) {}
+      if (force) root.classList.add('force-motion');
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Hoppa till innehållet</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="index.html" aria-label="Holvi"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
+      <nav id="site-nav" class="site-nav" aria-label="Meny">
+        <ul>
+          <li><a href="menu.html" aria-current="page">Meny</a></li>
+          <li><a href="story.html">Källaren</a></li>
+          <li><a href="visit.html">Öppettider och hitta hit</a></li>
+          <li class="site-nav__book"><a href="visit.html#book">Boka bord</a></li>
+        </ul>
+      </nav>
+      <nav class="lang" aria-label="Språk"><a href="../menu.html" lang="en" hreflang="en" aria-label="English">EN</a><a href="../fi/menu.html" lang="fi" hreflang="fi" aria-label="Suomi">FI</a><a href="../sv/menu.html" lang="sv" hreflang="sv" aria-label="Svenska" aria-current="true">SV</a></nav>
+      <a class="btn btn--solid btn--small site-header__cta" href="visit.html#book">Boka bord</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Meny</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="on-lime menu-page">
+      <section class="page-head">
+        <div class="wrap">
+          <h1 class="page-title">Veckans meny</h1>
+          <p class="page-lead">Skrivs varje tisdag. Allt möter samma björkeld på ett av fyra sätt, så du kan välja efter det också.</p>
+        </div>
+      </section>
+      <div class="wrap">
+        <fieldset class="fire-filter" data-fire-filter>
+          <legend>Visa rätter som tillagas</legend>
+          <button type="button" data-fire="all" aria-pressed="true">Alla</button>
+          <button type="button" data-fire="flame" aria-pressed="false">Över lågan</button>
+          <button type="button" data-fire="embers" aria-pressed="false">I glöden</button>
+          <button type="button" data-fire="smoke" aria-pressed="false">Rökt</button>
+          <button type="button" data-fire="raw" aria-pressed="false">Utan eld</button>
+        </fieldset>
+        <p class="visually-hidden" data-filter-status aria-live="polite"></p>
+        <div class="menu-layout">
+          <div>
+          <section class="course" aria-label="Till att börja">
+            <h2 class="course__title">Till att börja</h2>
+            <ul class="dishes">
+              <li class="dish" data-fire="smoke">
+                <h3 class="dish__name">Rågbröd och syrat smör <span class="dish__fi" lang="fi">Ruisleipä</span></h3>
+                <span class="dish__price">6 &euro;</span>
+                <p class="dish__desc">Bakas här varje morgon och serveras varmt med syrat smör och flingsalt.</p>
+                <span class="dish__fire">Rökt</span>
+              </li>
+              <li class="dish" data-fire="smoke">
+                <h3 class="dish__name">Varmrökt strömming <span class="dish__fi" lang="fi">Savusilakka</span></h3>
+                <span class="dish__price">14 &euro;</span>
+                <p class="dish__desc">Röks över al vid bordet, med äggsmör och potatischips.</p>
+                <span class="dish__fire">Rökt</span>
+              </li>
+              <li class="dish" data-fire="flame">
+                <h3 class="dish__name">Siklöja stekt i rågmjöl <span class="dish__fi" lang="fi">Muikut</span></h3>
+                <span class="dish__price">16 &euro;</span>
+                <p class="dish__desc">Små insjöfiskar från Saimen, äts hela, med citron och vitlöksmajonnäs.</p>
+                <span class="dish__fire">Över lågan</span>
+              </li>
+              <li class="dish" data-fire="embers">
+                <h3 class="dish__name">Rödbeta bakad i glöden <span class="dish__fi" lang="fi">Hiillostettu punajuuri</span></h3>
+                <span class="dish__price">15 &euro;</span>
+                <p class="dish__desc">Rökt kvarg, rostade rågsmulor, dillolja.</p>
+                <span class="dish__fire">I glöden</span>
+              </li>
+              <li class="dish" data-fire="raw">
+                <h3 class="dish__name">Gravad gös <span class="dish__fi" lang="fi">Graavattu kuha</span></h3>
+                <span class="dish__price">17 &euro;</span>
+                <p class="dish__desc">Gravad i salt och granskott, med gurka och pepparrotskräm.</p>
+                <span class="dish__fire">Utan eld</span>
+              </li>
+            </ul>
+            <p class="menu-empty" hidden>Inget i den här delen tillagas så den här veckan.</p>
+          </section>
+          <section class="course" aria-label="Från elden">
+            <h2 class="course__title">Från elden</h2>
+            <ul class="dishes">
+              <li class="dish" data-fire="flame">
+                <h3 class="dish__name">Sik över björkeld <span class="dish__fi" lang="fi">Siika</span></h3>
+                <span class="dish__price">32 &euro;</span>
+                <p class="dish__desc">Tillagas på benet, med brynt smör, inlagd gurka och färskpotatis.</p>
+                <span class="dish__fire">Över lågan</span>
+              </li>
+              <li class="dish" data-fire="embers">
+                <h3 class="dish__name">Åländsk lammbog <span class="dish__fi" lang="fi">Lampaanlapa</span></h3>
+                <span class="dish__price">36 &euro;</span>
+                <p class="dish__desc">Långkokt över natten bredvid elden, en, rotselleri bakad i glöden.</p>
+                <span class="dish__fire">I glöden</span>
+              </li>
+              <li class="dish" data-fire="flame">
+                <h3 class="dish__name">Entrecôte från Ruovesi <span class="dish__fi" lang="fi">Naudan entrecôte</span></h3>
+                <span class="dish__price">38 &euro;</span>
+                <p class="dish__desc">Betesdjur, mörat i fyra veckor, med rökt bensås och grillad lök.</p>
+                <span class="dish__fire">Över lågan</span>
+              </li>
+              <li class="dish" data-fire="embers">
+                <h3 class="dish__name">Rotselleristek <span class="dish__fi" lang="fi">Juuriselleri</span></h3>
+                <span class="dish__price">27 &euro;</span>
+                <p class="dish__desc">Hel rot tillagad i askan, brynt smör, hasselnötter, inlagda kantareller.</p>
+                <span class="dish__fire">I glöden</span>
+              </li>
+            </ul>
+            <p class="menu-empty" hidden>Inget i den här delen tillagas så den här veckan.</p>
+          </section>
+          <section class="course" aria-label="Efteråt">
+            <h2 class="course__title">Efteråt</h2>
+            <ul class="dishes">
+              <li class="dish" data-fire="raw">
+                <h3 class="dish__name">Kärnmjölkspudding <span class="dish__fi" lang="fi">Piimävanukas</span></h3>
+                <span class="dish__price">12 &euro;</span>
+                <p class="dish__desc">Havtorn och rostad havre.</p>
+                <span class="dish__fire">Utan eld</span>
+              </li>
+              <li class="dish" data-fire="embers">
+                <h3 class="dish__name">Äpple rostat i glöden <span class="dish__fi" lang="fi">Hiillostettu omena</span></h3>
+                <span class="dish__price">12 &euro;</span>
+                <p class="dish__desc">Rågglass och bränd honung.</p>
+                <span class="dish__fire">I glöden</span>
+              </li>
+              <li class="dish" data-fire="smoke">
+                <h3 class="dish__name">Lappländsk brödost <span class="dish__fi" lang="fi">Leipäjuusto</span></h3>
+                <span class="dish__price">13 &euro;</span>
+                <p class="dish__desc">Värmd vid elden, med hjortronsylt.</p>
+                <span class="dish__fire">Rökt</span>
+              </li>
+            </ul>
+            <p class="menu-empty" hidden>Inget i den här delen tillagas så den här veckan.</p>
+          </section>
+            <p class="menu-foot">Priserna inkluderar moms. Berätta om allergier när du bokar så lagar vi maten efter dem; de flesta rätter kan göras utan gluten eller mjölk.</p>
+          </div>
+          <aside class="menu-side" aria-label="Avsmakningsmeny">
+            <div class="arch"><img src="../assets/img/grill-1800.jpg" srcset="../assets/img/grill-900.jpg 900w, ../assets/img/grill-1800.jpg 1800w" sizes="(max-width: 960px) 45vw, 30vw" width="1800" height="2710" alt="Kött på grillen över öppen eld" loading="lazy" decoding="async"></div>
+            <div class="tasting">
+              <h2>Vid elden</h2>
+              <p>Sju rätter som köket väljer för kvällen, serverade till hela bordet. Be om den när du bokar, senast 17.00 samma dag.</p>
+              <div class="tasting__price"><span>Sju rätter</span><strong>79 &euro;</strong></div>
+              <div class="tasting__price"><span>Med vinpaket</span><strong>139 &euro;</strong></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="wordmark" href="index.html"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
+        <p>Elisabetsgatan, Kronohagen, Helsingfors<br>Tisdag till lördag från 17.00</p>
+        <p class="site-footer__credit">Designad och byggd av Julius Nordman, JN Design.</p>
+        <p>Holvi är en påhittad restaurang, gjord som portfoliodemo. Menyn, priserna och historien är uppdiktade. Bokningsformuläret skickar ingenting.</p>
+      </div>
+      <div>
+        <h2>Sidor</h2>
+        <ul>
+          <li><a href="menu.html">Meny</a></li>
+          <li><a href="story.html">Källaren</a></li>
+          <li><a href="visit.html">Öppettider och hitta hit</a></li>
+          <li><a href="visit.html#book">Boka bord</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Foton från Unsplash</h2>
+        <ul>
+          <li><a href="https://unsplash.com/photos/a-person-cooking-food-on-a-grill-in-the-dark-JKJmdRDfPfk">Matlagning i mörkret</a></li>
+          <li><a href="https://unsplash.com/photos/people-dining-in-a-restaurant-with-arched-stone-ceilings-NyWkEHSVLx0">Matsal med stenvalv</a></li>
+          <li><a href="https://unsplash.com/photos/fried-fish-on-black-round-plate-_o5mOJ3lOCA">Fisk på svart fat</a></li>
+          <li><a href="https://unsplash.com/photos/person-cooking-on-grill-with-fire-Aqot8S_Keb8">Grill över eld</a></li>
+          <li><a href="https://unsplash.com/photos/chef-pouring-sauce-over-plated-steak-MaWMfm-HCqQ">Sås vid passet</a></li>
+          <li><a href="https://unsplash.com/photos/person-holding-stainless-steel-spoon-and-fork-eating-on-black-table--g5jWce3HUQ">Vid bordet</a></li>
+          <li><a href="https://unsplash.com/photos/a-close-up-of-a-fire-burning-in-a-stove-hwMmAIMOzxU">Eld i kaminen</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/vendor/gsap.min.js" defer></script>
+  <script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/vendor/lenis.min.js" defer></script>
+  <script src="../assets/js/main.js?v=3" defer></script>
+</body>
+</html>

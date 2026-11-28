@@ -105,6 +105,12 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .wordmark:hover { color: var(--lime); }
 
 .site-nav { margin-left: auto; }
+
+/* Language switch */
+.lang { display: flex; gap: 0.15rem; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.02em; }
+.lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 2.2rem; min-height: 2.2rem; color: var(--stone); text-decoration: none; border: 1px solid transparent; border-radius: 2px; }
+.lang a:hover { color: var(--lime); border-color: var(--line); }
+.lang a[aria-current="true"] { color: var(--lime); border-color: var(--line); }
 .site-nav ul { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; }
 .site-nav a { text-decoration: none; color: var(--stone); font-weight: 500; padding: 0.4rem 0; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--lime); }
@@ -272,7 +278,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .hours th, .hours td { text-align: left; padding: 0.75rem 0; border-top: 1px solid var(--line); font-weight: 400; }
 .hours td { color: var(--stone); text-align: right; }
 .hours tr.is-today th, .hours tr.is-today td { color: var(--lime); font-weight: 600; }
-.hours tr.is-today th::after { content: " (today)"; font-weight: 400; color: var(--moss); }
+.hours__today { font-weight: 400; color: var(--moss); }
 .visit-side > * + * { margin-top: 3rem; }
 .address { font-style: normal; font-size: 1.25rem; line-height: 1.45; font-weight: 600; }
 .visit-side p { color: var(--stone); }
@@ -305,7 +311,8 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 }
 
 @media (max-width: 860px) {
-  .menu-toggle { display: block; }
+  .menu-toggle { display: block; margin-left: 0.5rem; }
+  .lang { margin-left: auto; }
   .site-header__cta { display: none; }
   .site-nav {
     position: fixed; inset: 4.5rem 0 auto 0; background: var(--soot); border-bottom: 1px solid var(--line);

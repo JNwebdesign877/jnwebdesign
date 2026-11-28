@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kellari | Holvi, Helsinki</title>
+  <meta name="description" content="Tarina Holvin vuoden 1888 graniittikellarista, sen koivutulesta ja tuottajista. Kuvitteellinen ravintola, portfoliodemo.">
+  <meta name="author" content="Julius Nordman, JN Design">
+  <meta name="theme-color" content="#13110f">
+  <link rel="alternate" hreflang="en" href="https://jnwebdesign.com/demos/holvi/story.html">
+  <link rel="alternate" hreflang="fi" href="https://jnwebdesign.com/demos/holvi/fi/story.html">
+  <link rel="alternate" hreflang="sv" href="https://jnwebdesign.com/demos/holvi/sv/story.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 26'%3E%3Crect width='22' height='26' fill='%2313110f'/%3E%3Cpath d='M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13' fill='none' stroke='%239db3a4' stroke-width='1.8'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&display=swap">
+  <link rel="stylesheet" href="../assets/vendor/lenis.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=3">
+  
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('holvi-motion', '1');
+        else force = sessionStorage.getItem('holvi-motion') === '1';
+      } catch (e) {}
+      if (force) root.classList.add('force-motion');
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="index.html" aria-label="Holvi"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
+      <nav id="site-nav" class="site-nav" aria-label="Valikko">
+        <ul>
+          <li><a href="menu.html">Ruokalista</a></li>
+          <li><a href="story.html" aria-current="page">Kellari</a></li>
+          <li><a href="visit.html">Aukioloajat ja sijainti</a></li>
+          <li class="site-nav__book"><a href="visit.html#book">Varaa pöytä</a></li>
+        </ul>
+      </nav>
+      <nav class="lang" aria-label="Kieli"><a href="../story.html" lang="en" hreflang="en" aria-label="English">EN</a><a href="../fi/story.html" lang="fi" hreflang="fi" aria-label="Suomi" aria-current="true">FI</a><a href="../sv/story.html" lang="sv" hreflang="sv" aria-label="Svenska">SV</a></nav>
+      <a class="btn btn--solid btn--small site-header__cta" href="visit.html#book">Varaa pöytä</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Valikko</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <h1 class="page-title">Viljakellari, jossa palaa tuli</h1>
+        <p class="page-lead">Miten vuoden 1888 varastohuoneesta tuli keittiö, ja mistä ruoka tulee.</p>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <div class="wide-photo"><img src="../assets/img/vault-1800.jpg" srcset="../assets/img/vault-900.jpg 900w, ../assets/img/vault-1800.jpg 1800w" sizes="100vw" width="1800" height="2700" alt="Ruokailijoita pöydissä kivisen holvikaton alla" loading="lazy" decoding="async"></div>
+
+      <section class="chapter" aria-labelledby="c1">
+        <div class="chapter__media"><div class="arch"><img src="../assets/img/stove-1800.jpg" srcset="../assets/img/stove-900.jpg 900w, ../assets/img/stove-1800.jpg 1800w" sizes="(max-width: 960px) 100vw, 40vw" width="1800" height="1200" alt="Koivuhalkoja palamassa rautakamiinassa" loading="lazy" decoding="async"></div></div>
+        <div>
+          <h2 id="c1">Huone rakennettiin pysymään kylmänä</h2>
+          <p>Viljakauppias louhitutti kellarin kallioon vuonna 1888. Metrin paksuiset graniittiseinät, kolme tiiliholvia, yksi luukku kadulle. Sodan aikana siellä säilytettiin korttelin perunat. 1990-luvulla siellä seisoivat polkupyörät.</p>
+          <p>Kun avasimme sen vuonna 2023, säilytimme kaiken, mitä siellä oli, ja lisäsimme yhden asian: teräksisen tulipesän entisen luukun paikalle ja hormin, joka nousee vanhaa kuilua pitkin.</p>
+        </div>
+      </section>
+
+      <section class="chapter chapter--flip" aria-labelledby="c2">
+        <div class="chapter__media"><div class="arch"><img src="../assets/img/grill-1800.jpg" srcset="../assets/img/grill-900.jpg 900w, ../assets/img/grill-1800.jpg 1800w" sizes="(max-width: 960px) 100vw, 40vw" width="1800" height="2710" alt="Lihaa grillissä avotulen yllä" loading="lazy" decoding="async"></div></div>
+        <div>
+          <h2 id="c2">Yksi tuli, neljä tapaa kokata</h2>
+          <p>Tuli sytytetään kolmelta iltapäivällä, ja koivu palaa sulkemiseen asti. Kala ja pihvit menevät liekkien päälle. Juurekset ja lammas viipyvät hiilloksessa tunteja. Silakka ja juusto saavat savun. Muutama asia ei kohtaa tulta lainkaan, koska joskus raakana on parasta.</p>
+          <p>Keittiössä ei ole kaasua. Kun tuli on matalalla, ruokalista odottaa.</p>
+        </div>
+      </section>
+
+      <section class="chapter" aria-labelledby="c3">
+        <div class="chapter__media"><div class="arch"><img src="../assets/img/table-1800.jpg" srcset="../assets/img/table-900.jpg 900w, ../assets/img/table-1800.jpg 1800w" sizes="(max-width: 960px) 100vw, 40vw" width="1800" height="2700" alt="Ruokailija pimeän pöydän ääressä" loading="lazy" decoding="async"></div></div>
+        <div>
+          <h2 id="c3">Mistä ruoka tulee</h2>
+          <p>Suurin osa ruoasta on pyydetty tai kasvatettu päivän ajomatkan päässä. Ostamme kokonaisia eläimiä ja kokonaisia kaloja, joten ruokalista seuraa sitä, mitä kukin antaa.</p>
+          <ul class="producers">
+            <li><strong>Saimaa</strong><span>Muikkua ja kuhaa, verkolla</span></li>
+            <li><strong>Merenkurkku</strong><span>Siikaa ja silakkaa</span></li>
+            <li><strong>Ahvenanmaa</strong><span>Lammasta ulkosaarten laitumilta</span></li>
+            <li><strong>Ruovesi</strong><span>Laiduntanutta naudanlihaa</span></li>
+            <li><strong>Sipoo</strong><span>Juureksia, punajuurta ja omenoita</span></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <section class="close on-lime" aria-labelledby="close-title">
+      <div class="wrap close__grid">
+        <h2 id="close-title">Tule alas istumaan tulen ääreen.</h2>
+        <div>
+          <p>Avoinna tiistaista lauantaihin klo 17.00 alkaen. Kuusi tiskipaikkaa pidetään vapaana ilman varausta tuleville.</p>
+          <a class="btn btn--solid" href="visit.html#book">Varaa pöytä <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5.5 15.5 10 11 14.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="wordmark" href="index.html"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
+        <p>Liisankatu, Kruununhaka, Helsinki<br>Tiistaista lauantaihin klo 17.00 alkaen</p>
+        <p class="site-footer__credit">Suunnitellut ja toteuttanut Julius Nordman, JN Design.</p>
+        <p>Holvi on kuvitteellinen ravintola, tehty portfoliodemoksi. Ruokalista, hinnat ja historia ovat keksittyjä. Varauslomake ei lähetä mitään.</p>
+      </div>
+      <div>
+        <h2>Sivut</h2>
+        <ul>
+          <li><a href="menu.html">Ruokalista</a></li>
+          <li><a href="story.html">Kellari</a></li>
+          <li><a href="visit.html">Aukioloajat ja sijainti</a></li>
+          <li><a href="visit.html#book">Varaa pöytä</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Kuvat Unsplashista</h2>
+        <ul>
+          <li><a href="https://unsplash.com/photos/a-person-cooking-food-on-a-grill-in-the-dark-JKJmdRDfPfk">Ruoanlaittoa pimeässä</a></li>
+          <li><a href="https://unsplash.com/photos/people-dining-in-a-restaurant-with-arched-stone-ceilings-NyWkEHSVLx0">Kiviholvinen ruokasali</a></li>
+          <li><a href="https://unsplash.com/photos/fried-fish-on-black-round-plate-_o5mOJ3lOCA">Kala mustalla lautasella</a></li>
+          <li><a href="https://unsplash.com/photos/person-cooking-on-grill-with-fire-Aqot8S_Keb8">Grilli tulen päällä</a></li>
+          <li><a href="https://unsplash.com/photos/chef-pouring-sauce-over-plated-steak-MaWMfm-HCqQ">Kastike annokselle</a></li>
+          <li><a href="https://unsplash.com/photos/person-holding-stainless-steel-spoon-and-fork-eating-on-black-table--g5jWce3HUQ">Pöydän ääressä</a></li>
+          <li><a href="https://unsplash.com/photos/a-close-up-of-a-fire-burning-in-a-stove-hwMmAIMOzxU">Tuli kamiinassa</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/vendor/gsap.min.js" defer></script>
+  <script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/vendor/lenis.min.js" defer></script>
+  <script src="../assets/js/main.js?v=3" defer></script>
+</body>
+</html>

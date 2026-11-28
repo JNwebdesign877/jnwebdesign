@@ -7,12 +7,15 @@
   <meta name="description" content="This week's menu at Holvi: fish, lamb and vegetables cooked over birch, in the embers or in smoke. Fictional restaurant, portfolio demo.">
   <meta name="author" content="Julius Nordman, JN Design">
   <meta name="theme-color" content="#13110f">
+  <link rel="alternate" hreflang="en" href="https://jnwebdesign.com/demos/holvi/menu.html">
+  <link rel="alternate" hreflang="fi" href="https://jnwebdesign.com/demos/holvi/fi/menu.html">
+  <link rel="alternate" hreflang="sv" href="https://jnwebdesign.com/demos/holvi/sv/menu.html">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 26'%3E%3Crect width='22' height='26' fill='%2313110f'/%3E%3Cpath d='M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13' fill='none' stroke='%239db3a4' stroke-width='1.8'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&display=swap">
   <link rel="stylesheet" href="assets/vendor/lenis.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=2">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
   
   <script>
     /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
@@ -35,8 +38,8 @@
 
   <header class="site-header">
     <div class="wrap site-header__inner">
-      <a class="wordmark" href="index.html" aria-label="Holvi, home"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
-      <nav id="site-nav" class="site-nav" aria-label="Main">
+      <a class="wordmark" href="index.html" aria-label="Holvi"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
+      <nav id="site-nav" class="site-nav" aria-label="Menu">
         <ul>
           <li><a href="menu.html" aria-current="page">Menu</a></li>
           <li><a href="story.html">The vault</a></li>
@@ -44,6 +47,7 @@
           <li class="site-nav__book"><a href="visit.html#book">Book a table</a></li>
         </ul>
       </nav>
+      <nav class="lang" aria-label="Language"><a href="menu.html" lang="en" hreflang="en" aria-label="English" aria-current="true">EN</a><a href="fi/menu.html" lang="fi" hreflang="fi" aria-label="Suomi">FI</a><a href="sv/menu.html" lang="sv" hreflang="sv" aria-label="Svenska">SV</a></nav>
       <a class="btn btn--solid btn--small site-header__cta" href="visit.html#book">Book a table</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="menu-toggle__bars" aria-hidden="true"></span>
@@ -76,34 +80,34 @@
             <h2 class="course__title">To start</h2>
             <ul class="dishes">
               <li class="dish" data-fire="smoke">
-                <h3 class="dish__name">Rye bread and cultured butter <span class="dish__fi">Ruisleipä</span></h3>
+                <h3 class="dish__name">Rye bread and cultured butter <span class="dish__fi" lang="fi">Ruisleipä</span></h3>
                 <span class="dish__price">6 &euro;</span>
                 <p class="dish__desc">Baked here each morning, served warm with cultured butter and flaky salt.</p>
                 <span class="dish__fire">Smoked</span>
               </li>
               <li class="dish" data-fire="smoke">
-                <h3 class="dish__name">Hot-smoked Baltic herring <span class="dish__fi">Savusilakka</span></h3>
+                <h3 class="dish__name">Hot-smoked Baltic herring <span class="dish__fi" lang="fi">Savusilakka</span></h3>
                 <span class="dish__price">14 &euro;</span>
                 <p class="dish__desc">Smoked over alder at the table, with egg butter and potato crisps.</p>
                 <span class="dish__fire">Smoked</span>
               </li>
               <li class="dish" data-fire="flame">
-                <h3 class="dish__name">Vendace fried in rye flour <span class="dish__fi">Muikut</span></h3>
+                <h3 class="dish__name">Vendace fried in rye flour <span class="dish__fi" lang="fi">Muikut</span></h3>
                 <span class="dish__price">16 &euro;</span>
                 <p class="dish__desc">Small lake fish from Saimaa, eaten whole, with lemon and garlic mayonnaise.</p>
                 <span class="dish__fire">Over the flame</span>
               </li>
               <li class="dish" data-fire="embers">
-                <h3 class="dish__name">Beetroot baked in the coals <span class="dish__fi">Hiillostettu punajuuri</span></h3>
+                <h3 class="dish__name">Beetroot baked in the coals <span class="dish__fi" lang="fi">Hiillostettu punajuuri</span></h3>
                 <span class="dish__price">15 &euro;</span>
                 <p class="dish__desc">Smoked curd, toasted rye crumbs, dill oil.</p>
                 <span class="dish__fire">In the embers</span>
               </li>
               <li class="dish" data-fire="raw">
-                <h3 class="dish__name">Pike-perch, cured <span class="dish__fi">Graavattu kuha</span></h3>
+                <h3 class="dish__name">Pike-perch, cured <span class="dish__fi" lang="fi">Graavattu kuha</span></h3>
                 <span class="dish__price">17 &euro;</span>
                 <p class="dish__desc">Cured in salt and spruce tips, with cucumber and horseradish cream.</p>
-                <span class="dish__fire">No fire</span>
+                <span class="dish__fire">With no fire</span>
               </li>
             </ul>
             <p class="menu-empty" hidden>Nothing in this course is cooked that way this week.</p>
@@ -112,25 +116,25 @@
             <h2 class="course__title">From the fire</h2>
             <ul class="dishes">
               <li class="dish" data-fire="flame">
-                <h3 class="dish__name">Whitefish over birch <span class="dish__fi">Siika</span></h3>
+                <h3 class="dish__name">Whitefish over birch <span class="dish__fi" lang="fi">Siika</span></h3>
                 <span class="dish__price">32 &euro;</span>
                 <p class="dish__desc">Cooked on the bone, with brown butter, pickled cucumber and new potatoes.</p>
                 <span class="dish__fire">Over the flame</span>
               </li>
               <li class="dish" data-fire="embers">
-                <h3 class="dish__name">&Aring;land lamb shoulder <span class="dish__fi">Lampaanlapa</span></h3>
+                <h3 class="dish__name">&Aring;land lamb shoulder <span class="dish__fi" lang="fi">Lampaanlapa</span></h3>
                 <span class="dish__price">36 &euro;</span>
                 <p class="dish__desc">Slow-cooked overnight beside the fire, juniper, celeriac baked in the embers.</p>
                 <span class="dish__fire">In the embers</span>
               </li>
               <li class="dish" data-fire="flame">
-                <h3 class="dish__name">Beef from Ruovesi <span class="dish__fi">Naudan entrecôte</span></h3>
+                <h3 class="dish__name">Beef from Ruovesi <span class="dish__fi" lang="fi">Naudan entrecôte</span></h3>
                 <span class="dish__price">38 &euro;</span>
                 <p class="dish__desc">Grass-fed, aged four weeks, with smoked bone sauce and charred onion.</p>
                 <span class="dish__fire">Over the flame</span>
               </li>
               <li class="dish" data-fire="embers">
-                <h3 class="dish__name">Celeriac steak <span class="dish__fi">Juuriselleri</span></h3>
+                <h3 class="dish__name">Celeriac steak <span class="dish__fi" lang="fi">Juuriselleri</span></h3>
                 <span class="dish__price">27 &euro;</span>
                 <p class="dish__desc">Whole root cooked in the ashes, brown butter, hazelnuts, pickled chanterelles.</p>
                 <span class="dish__fire">In the embers</span>
@@ -142,19 +146,19 @@
             <h2 class="course__title">After</h2>
             <ul class="dishes">
               <li class="dish" data-fire="raw">
-                <h3 class="dish__name">Buttermilk pudding <span class="dish__fi">Piimävanukas</span></h3>
+                <h3 class="dish__name">Buttermilk pudding <span class="dish__fi" lang="fi">Piimävanukas</span></h3>
                 <span class="dish__price">12 &euro;</span>
                 <p class="dish__desc">Sea buckthorn and toasted oats.</p>
-                <span class="dish__fire">No fire</span>
+                <span class="dish__fire">With no fire</span>
               </li>
               <li class="dish" data-fire="embers">
-                <h3 class="dish__name">Ember-roasted apple <span class="dish__fi">Hiillostettu omena</span></h3>
+                <h3 class="dish__name">Ember-roasted apple <span class="dish__fi" lang="fi">Hiillostettu omena</span></h3>
                 <span class="dish__price">12 &euro;</span>
                 <p class="dish__desc">Rye ice cream and burnt honey.</p>
                 <span class="dish__fire">In the embers</span>
               </li>
               <li class="dish" data-fire="smoke">
-                <h3 class="dish__name">Cheese from Lapland <span class="dish__fi">Leipäjuusto</span></h3>
+                <h3 class="dish__name">Cheese from Lapland <span class="dish__fi" lang="fi">Leipäjuusto</span></h3>
                 <span class="dish__price">13 &euro;</span>
                 <p class="dish__desc">Warmed by the fire, with cloudberry jam.</p>
                 <span class="dish__fire">Smoked</span>
@@ -213,6 +217,6 @@
   <script src="assets/vendor/gsap.min.js" defer></script>
   <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
   <script src="assets/vendor/lenis.min.js" defer></script>
-  <script src="assets/js/main.js?v=2" defer></script>
+  <script src="assets/js/main.js?v=3" defer></script>
 </body>
 </html>

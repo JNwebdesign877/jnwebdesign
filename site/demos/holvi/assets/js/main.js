@@ -8,7 +8,53 @@
 
   /* Opening hours, Helsinki time. Day 0 is Sunday. [open, close, kitchen closes] in hours. */
   var HOURS = { 2: [17, 23, 22], 3: [17, 23, 22], 4: [17, 23, 22], 5: [17, 24, 23], 6: [17, 24, 23] };
-  var DAY_NAMES = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  /* Text the script writes, per page language */
+  var I18N = {
+    en: {
+      locale: 'en-GB',
+      openLater: '<strong>Open tonight</strong> {o} to {c}. Kitchen until {k}.',
+      openNow: '<strong>Open now</strong> until {c}. Last orders {k}.',
+      closed: '<strong>Closed tonight.</strong> Next open {when} from {o}.',
+      tomorrow: 'tomorrow', onDay: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      today: 'today',
+      filterAll: 'Showing the whole menu.', filterSome: 'Showing {n} dishes: {m}.',
+      eDate: 'Choose a date.', ePast: 'That date has passed. Pick today or later.',
+      eClosed: ['We are closed on Sundays. Pick Tuesday to Saturday.', 'We are closed on Mondays. Pick Tuesday to Saturday.'],
+      eTime: 'Choose a time.', eGuests: 'Choose how many of you are coming.', eName: 'Add the name the table is under.',
+      eEmail: 'Add an email so we can confirm.', eEmailBad: 'That email looks incomplete, for example name@example.com.',
+      summary: '{g} at {t} on {d}, under {n}.'
+    },
+    fi: {
+      locale: 'fi-FI',
+      openLater: '<strong>Avoinna tänään</strong> {o}–{c}. Keittiö {k} asti.',
+      openNow: '<strong>Avoinna nyt</strong> {c} asti. Viimeiset tilaukset {k}.',
+      closed: '<strong>Suljettu tänään.</strong> Seuraavan kerran avoinna {when} klo {o} alkaen.',
+      tomorrow: 'huomenna', onDay: ['sunnuntaina', 'maanantaina', 'tiistaina', 'keskiviikkona', 'torstaina', 'perjantaina', 'lauantaina'],
+      today: 'tänään',
+      filterAll: 'Näytetään koko ruokalista.', filterSome: 'Näytetään {n} annosta: {m}.',
+      eDate: 'Valitse päivä.', ePast: 'Päivä on jo mennyt. Valitse tämä päivä tai myöhempi.',
+      eClosed: ['Olemme suljettuina sunnuntaisin. Valitse tiistai–lauantai.', 'Olemme suljettuina maanantaisin. Valitse tiistai–lauantai.'],
+      eTime: 'Valitse aika.', eGuests: 'Valitse, montako teitä tulee.', eName: 'Kirjoita nimi, jolle pöytä varataan.',
+      eEmail: 'Lisää sähköposti, jotta voimme vahvistaa varauksen.', eEmailBad: 'Sähköpostiosoite näyttää vajaalta, esimerkiksi nimi@example.com.',
+      summary: '{g}, {d} klo {t}, nimellä {n}.'
+    },
+    sv: {
+      locale: 'sv-FI',
+      openLater: '<strong>Öppet i kväll</strong> {o}–{c}. Köket till {k}.',
+      openNow: '<strong>Öppet nu</strong> till {c}. Sista beställning {k}.',
+      closed: '<strong>Stängt i kväll.</strong> Nästa gång öppet {when} från {o}.',
+      tomorrow: 'i morgon', onDay: ['på söndag', 'på måndag', 'på tisdag', 'på onsdag', 'på torsdag', 'på fredag', 'på lördag'],
+      today: 'i dag',
+      filterAll: 'Visar hela menyn.', filterSome: 'Visar {n} rätter: {m}.',
+      eDate: 'Välj ett datum.', ePast: 'Datumet har redan passerat. Välj i dag eller senare.',
+      eClosed: ['Vi har stängt på söndagar. Välj tisdag till lördag.', 'Vi har stängt på måndagar. Välj tisdag till lördag.'],
+      eTime: 'Välj en tid.', eGuests: 'Välj hur många ni blir.', eName: 'Skriv namnet bordet ska bokas på.',
+      eEmail: 'Lägg till en e-postadress så att vi kan bekräfta.', eEmailBad: 'E-postadressen ser ofullständig ut, till exempel namn@example.com.',
+      summary: '{g} kl. {t} {d}, i namnet {n}.'
+    }
+  };
+  var L = I18N[root.lang] || I18N.en;
+  function fill(str, vals) { return str.replace(/\{(\w+)\}/g, function (m, k) { return vals[k] !== undefined ? vals[k] : m; }); }
 
   function helsinkiNow() {
     var parts = new Intl.DateTimeFormat('en-GB', {
@@ -29,14 +75,12 @@
     var state = 'closed', msg;
     if (today && now.time < today[2]) {
       state = 'open';
-      msg = now.time < today[0]
-        ? '<strong>Open tonight</strong> ' + fmt(today[0]) + ' to ' + fmt(today[1]) + '. Kitchen until ' + fmt(today[2]) + '.'
-        : '<strong>Open now</strong> until ' + fmt(today[1]) + '. Last orders ' + fmt(today[2]) + '.';
+      msg = fill(now.time < today[0] ? L.openLater : L.openNow, { o: fmt(today[0]), c: fmt(today[1]), k: fmt(today[2]) });
     } else {
       for (var i = 1; i <= 7; i++) {
         var d = (now.day + i) % 7;
         if (HOURS[d]) {
-          msg = '<strong>Closed tonight.</strong> Next open ' + (i === 1 ? 'tomorrow' : DAY_NAMES[d]) + ' from ' + fmt(HOURS[d][0]) + '.';
+          msg = fill(L.closed, { when: i === 1 ? L.tomorrow : L.onDay[d], o: fmt(HOURS[d][0]) });
           break;
         }
       }
@@ -49,7 +93,13 @@
   var hoursTable = document.querySelector('[data-hours]');
   if (hoursTable) {
     var row = hoursTable.querySelector('[data-day="' + helsinkiNow().day + '"]');
-    if (row) row.classList.add('is-today');
+    if (row) {
+      row.classList.add('is-today');
+      var tag = document.createElement('span');
+      tag.className = 'hours__today';
+      tag.textContent = ' (' + L.today + ')';
+      row.querySelector('th').appendChild(tag);
+    }
   }
 
   /* Smooth scroll, driven by GSAP's ticker so ScrollTrigger stays in sync */
@@ -107,7 +157,7 @@
         var empty = c.querySelector('.menu-empty');
         empty.hidden = !!any;
       });
-      status.textContent = fire === 'all' ? 'Showing the whole menu.' : 'Showing ' + shown + ' dishes cooked ' + btn.textContent.toLowerCase() + '.';
+      status.textContent = fire === 'all' ? L.filterAll : fill(L.filterSome, { n: shown, m: btn.textContent.toLowerCase() });
       if (hasGsap && !reduce) {
         gsap.fromTo('.dish:not([hidden])', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.45, stagger: 0.03, ease: 'expo.out' });
       }
@@ -135,18 +185,18 @@
     function check(field) {
       var v = field.value.trim();
       if (field.name === 'date') {
-        if (!v) return 'Choose a date.';
+        if (!v) return L.eDate;
         var d = new Date(v + 'T12:00:00');
         var day = d.getDay();
-        if (!HOURS[day]) return 'We are closed on ' + DAY_NAMES[day] + 's. Pick Tuesday to Saturday.';
-        if (v < todayIso) return 'That date has passed. Pick today or later.';
+        if (!HOURS[day]) return L.eClosed[day];
+        if (v < todayIso) return L.ePast;
       }
-      if (field.name === 'time' && !v) return 'Choose a time.';
-      if (field.name === 'guests' && !v) return 'Choose how many of you are coming.';
-      if (field.name === 'name' && !v) return 'Add the name the table is under.';
+      if (field.name === 'time' && !v) return L.eTime;
+      if (field.name === 'guests' && !v) return L.eGuests;
+      if (field.name === 'name' && !v) return L.eName;
       if (field.name === 'email') {
-        if (!v) return 'Add an email so we can confirm.';
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return 'That email looks incomplete, for example name@example.com.';
+        if (!v) return L.eEmail;
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return L.eEmailBad;
       }
       return '';
     }
@@ -166,9 +216,10 @@
       if (first) { first.focus(); return; }
       var done = document.getElementById('book-done');
       var d = new Date(date.value + 'T12:00:00');
-      done.querySelector('[data-summary]').textContent =
-        form.elements.guests.value + ' at ' + form.elements.time.value + ' on ' +
-        d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' }) + ', under ' + form.elements.name.value.trim() + '.';
+      done.querySelector('[data-summary]').textContent = fill(L.summary, {
+        g: form.elements.guests.value, t: form.elements.time.value, n: form.elements.name.value.trim(),
+        d: d.toLocaleDateString(L.locale, { weekday: 'long', day: 'numeric', month: 'long' })
+      });
       form.hidden = true;
       done.hidden = false;
       done.focus();

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruokalista | Holvi, Helsinki</title>
+  <meta name="description" content="Holvin tämän viikon ruokalista: kalaa, lammasta ja kasviksia koivun liekeillä, hiilloksessa tai savussa. Kuvitteellinen ravintola, portfoliodemo.">
+  <meta name="author" content="Julius Nordman, JN Design">
+  <meta name="theme-color" content="#13110f">
+  <link rel="alternate" hreflang="en" href="https://jnwebdesign.com/demos/holvi/menu.html">
+  <link rel="alternate" hreflang="fi" href="https://jnwebdesign.com/demos/holvi/fi/menu.html">
+  <link rel="alternate" hreflang="sv" href="https://jnwebdesign.com/demos/holvi/sv/menu.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 26'%3E%3Crect width='22' height='26' fill='%2313110f'/%3E%3Cpath d='M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13' fill='none' stroke='%239db3a4' stroke-width='1.8'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&display=swap">
+  <link rel="stylesheet" href="../assets/vendor/lenis.css">
+  <link rel="stylesheet" href="../assets/css/style.css?v=3">
+  
+  <script>
+    /* Respect reduced motion. Add ?motion=1 to the URL to force animation on for a demo (kept for this tab). */
+    (function (root) {
+      var force = /[?&]motion=1\b/.test(location.search);
+      try {
+        if (force) sessionStorage.setItem('holvi-motion', '1');
+        else force = sessionStorage.getItem('holvi-motion') === '1';
+      } catch (e) {}
+      if (force) root.classList.add('force-motion');
+      var reduce = !force && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { root.classList.add('reduce-motion'); return; }
+      root.classList.add('intro');
+      setTimeout(function () { root.classList.remove('intro'); }, 3000);
+    })(document.documentElement);
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Siirry sisältöön</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="index.html" aria-label="Holvi"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
+      <nav id="site-nav" class="site-nav" aria-label="Valikko">
+        <ul>
+          <li><a href="menu.html" aria-current="page">Ruokalista</a></li>
+          <li><a href="story.html">Kellari</a></li>
+          <li><a href="visit.html">Aukioloajat ja sijainti</a></li>
+          <li class="site-nav__book"><a href="visit.html#book">Varaa pöytä</a></li>
+        </ul>
+      </nav>
+      <nav class="lang" aria-label="Kieli"><a href="../menu.html" lang="en" hreflang="en" aria-label="English">EN</a><a href="../fi/menu.html" lang="fi" hreflang="fi" aria-label="Suomi" aria-current="true">FI</a><a href="../sv/menu.html" lang="sv" hreflang="sv" aria-label="Svenska">SV</a></nav>
+      <a class="btn btn--solid btn--small site-header__cta" href="visit.html#book">Varaa pöytä</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-toggle__bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Valikko</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="on-lime menu-page">
+      <section class="page-head">
+        <div class="wrap">
+          <h1 class="page-title">Tämän viikon ruokalista</h1>
+          <p class="page-lead">Kirjoitetaan joka tiistai. Kaikki kohtaa saman koivutulen yhdellä neljästä tavasta, joten voit valita senkin mukaan.</p>
+        </div>
+      </section>
+      <div class="wrap">
+        <fieldset class="fire-filter" data-fire-filter>
+          <legend>Näytä annokset, jotka on kypsennetty</legend>
+          <button type="button" data-fire="all" aria-pressed="true">Kaikki</button>
+          <button type="button" data-fire="flame" aria-pressed="false">Liekeillä</button>
+          <button type="button" data-fire="embers" aria-pressed="false">Hiilloksessa</button>
+          <button type="button" data-fire="smoke" aria-pressed="false">Savustettuna</button>
+          <button type="button" data-fire="raw" aria-pressed="false">Ilman tulta</button>
+        </fieldset>
+        <p class="visually-hidden" data-filter-status aria-live="polite"></p>
+        <div class="menu-layout">
+          <div>
+          <section class="course" aria-label="Aluksi">
+            <h2 class="course__title">Aluksi</h2>
+            <ul class="dishes">
+              <li class="dish" data-fire="smoke">
+                <h3 class="dish__name">Ruisleipä ja hapatettu voi</h3>
+                <span class="dish__price">6 &euro;</span>
+                <p class="dish__desc">Leivotaan täällä joka aamu ja tarjoillaan lämpimänä hapatetun voin ja hiutalesuolan kanssa.</p>
+                <span class="dish__fire">Savustettuna</span>
+              </li>
+              <li class="dish" data-fire="smoke">
+                <h3 class="dish__name">Savusilakat</h3>
+                <span class="dish__price">14 &euro;</span>
+                <p class="dish__desc">Savustetaan lepällä pöydässä, munavoin ja perunalastujen kanssa.</p>
+                <span class="dish__fire">Savustettuna</span>
+              </li>
+              <li class="dish" data-fire="flame">
+                <h3 class="dish__name">Ruisjauhoissa paistetut muikut</h3>
+                <span class="dish__price">16 &euro;</span>
+                <p class="dish__desc">Pieniä Saimaan järvikaloja, syödään kokonaisina, sitruunan ja valkosipulimajoneesin kanssa.</p>
+                <span class="dish__fire">Liekeillä</span>
+              </li>
+              <li class="dish" data-fire="embers">
+                <h3 class="dish__name">Hiilloksessa paahdettu punajuuri</h3>
+                <span class="dish__price">15 &euro;</span>
+                <p class="dish__desc">Savurahkaa, paahdettua ruismurua, tilliöljyä.</p>
+                <span class="dish__fire">Hiilloksessa</span>
+              </li>
+              <li class="dish" data-fire="raw">
+                <h3 class="dish__name">Graavattu kuha</h3>
+                <span class="dish__price">17 &euro;</span>
+                <p class="dish__desc">Graavattu suolassa ja kuusenkerkissä, kurkun ja piparjuurikerman kanssa.</p>
+                <span class="dish__fire">Ilman tulta</span>
+              </li>
+            </ul>
+            <p class="menu-empty" hidden>Tämän osion annoksia ei tällä viikolla kypsennetä näin.</p>
+          </section>
+          <section class="course" aria-label="Tulelta">
+            <h2 class="course__title">Tulelta</h2>
+            <ul class="dishes">
+              <li class="dish" data-fire="flame">
+                <h3 class="dish__name">Siikaa koivun liekeillä</h3>
+                <span class="dish__price">32 &euro;</span>
+                <p class="dish__desc">Kypsennetään ruodoillaan, ruskistetun voin, suolakurkun ja uusien perunoiden kanssa.</p>
+                <span class="dish__fire">Liekeillä</span>
+              </li>
+              <li class="dish" data-fire="embers">
+                <h3 class="dish__name">Ahvenanmaan lampaanlapa</h3>
+                <span class="dish__price">36 &euro;</span>
+                <p class="dish__desc">Haudutetaan yön yli tulen vieressä, katajaa, hiilloksessa paahdettua juuriselleriä.</p>
+                <span class="dish__fire">Hiilloksessa</span>
+              </li>
+              <li class="dish" data-fire="flame">
+                <h3 class="dish__name">Ruoveden naudan entrecôte</h3>
+                <span class="dish__price">38 &euro;</span>
+                <p class="dish__desc">Laiduntanutta, neljä viikkoa kypsytettyä, savustetun luukastikkeen ja hiillostetun sipulin kanssa.</p>
+                <span class="dish__fire">Liekeillä</span>
+              </li>
+              <li class="dish" data-fire="embers">
+                <h3 class="dish__name">Juuriselleripihvi</h3>
+                <span class="dish__price">27 &euro;</span>
+                <p class="dish__desc">Kokonainen juuri kypsennettynä tuhkassa, ruskistettua voita, hasselpähkinöitä, säilöttyjä kantarelleja.</p>
+                <span class="dish__fire">Hiilloksessa</span>
+              </li>
+            </ul>
+            <p class="menu-empty" hidden>Tämän osion annoksia ei tällä viikolla kypsennetä näin.</p>
+          </section>
+          <section class="course" aria-label="Lopuksi">
+            <h2 class="course__title">Lopuksi</h2>
+            <ul class="dishes">
+              <li class="dish" data-fire="raw">
+                <h3 class="dish__name">Piimävanukas</h3>
+                <span class="dish__price">12 &euro;</span>
+                <p class="dish__desc">Tyrniä ja paahdettua kauraa.</p>
+                <span class="dish__fire">Ilman tulta</span>
+              </li>
+              <li class="dish" data-fire="embers">
+                <h3 class="dish__name">Hiilloksessa paahdettu omena</h3>
+                <span class="dish__price">12 &euro;</span>
+                <p class="dish__desc">Ruisjäätelöä ja poltettua hunajaa.</p>
+                <span class="dish__fire">Hiilloksessa</span>
+              </li>
+              <li class="dish" data-fire="smoke">
+                <h3 class="dish__name">Leipäjuusto</h3>
+                <span class="dish__price">13 &euro;</span>
+                <p class="dish__desc">Lämmitetty tulen ääressä, lakkahillon kanssa.</p>
+                <span class="dish__fire">Savustettuna</span>
+              </li>
+            </ul>
+            <p class="menu-empty" hidden>Tämän osion annoksia ei tällä viikolla kypsennetä näin.</p>
+          </section>
+            <p class="menu-foot">Hinnat sisältävät arvonlisäveron. Kerro allergioista varauksen yhteydessä, niin kokkaamme niiden mukaan; useimmat annokset voi tehdä gluteenittomina tai maidottomina.</p>
+          </div>
+          <aside class="menu-side" aria-label="Maistelumenu">
+            <div class="arch"><img src="../assets/img/grill-1800.jpg" srcset="../assets/img/grill-900.jpg 900w, ../assets/img/grill-1800.jpg 1800w" sizes="(max-width: 960px) 45vw, 30vw" width="1800" height="2710" alt="Lihaa grillissä avoimen tulen yllä" loading="lazy" decoding="async"></div>
+            <div class="tasting">
+              <h2>Tulen ääressä</h2>
+              <p>Seitsemän ruokalajia keittiön valitsemana illan mukaan, koko pöydälle. Pyydä sitä varatessasi, viimeistään klo 17.00 samana päivänä.</p>
+              <div class="tasting__price"><span>Seitsemän ruokalajia</span><strong>79 &euro;</strong></div>
+              <div class="tasting__price"><span>Viinipaketin kanssa</span><strong>139 &euro;</strong></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="wordmark" href="index.html"><svg viewBox="0 0 22 26" aria-hidden="true"><path d="M2 25V11a9 9 0 0 1 18 0v14M7 25V12a4 4 0 0 1 8 0v13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Holvi</a>
+        <p>Liisankatu, Kruununhaka, Helsinki<br>Tiistaista lauantaihin klo 17.00 alkaen</p>
+        <p class="site-footer__credit">Suunnitellut ja toteuttanut Julius Nordman, JN Design.</p>
+        <p>Holvi on kuvitteellinen ravintola, tehty portfoliodemoksi. Ruokalista, hinnat ja historia ovat keksittyjä. Varauslomake ei lähetä mitään.</p>
+      </div>
+      <div>
+        <h2>Sivut</h2>
+        <ul>
+          <li><a href="menu.html">Ruokalista</a></li>
+          <li><a href="story.html">Kellari</a></li>
+          <li><a href="visit.html">Aukioloajat ja sijainti</a></li>
+          <li><a href="visit.html#book">Varaa pöytä</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Kuvat Unsplashista</h2>
+        <ul>
+          <li><a href="https://unsplash.com/photos/a-person-cooking-food-on-a-grill-in-the-dark-JKJmdRDfPfk">Ruoanlaittoa pimeässä</a></li>
+          <li><a href="https://unsplash.com/photos/people-dining-in-a-restaurant-with-arched-stone-ceilings-NyWkEHSVLx0">Kiviholvinen ruokasali</a></li>
+          <li><a href="https://unsplash.com/photos/fried-fish-on-black-round-plate-_o5mOJ3lOCA">Kala mustalla lautasella</a></li>
+          <li><a href="https://unsplash.com/photos/person-cooking-on-grill-with-fire-Aqot8S_Keb8">Grilli tulen päällä</a></li>
+          <li><a href="https://unsplash.com/photos/chef-pouring-sauce-over-plated-steak-MaWMfm-HCqQ">Kastike annokselle</a></li>
+          <li><a href="https://unsplash.com/photos/person-holding-stainless-steel-spoon-and-fork-eating-on-black-table--g5jWce3HUQ">Pöydän ääressä</a></li>
+          <li><a href="https://unsplash.com/photos/a-close-up-of-a-fire-burning-in-a-stove-hwMmAIMOzxU">Tuli kamiinassa</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/vendor/gsap.min.js" defer></script>
+  <script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/vendor/lenis.min.js" defer></script>
+  <script src="../assets/js/main.js?v=3" defer></script>
+</body>
+</html>
