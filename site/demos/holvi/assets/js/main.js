@@ -180,10 +180,16 @@
 
   var heroArch = document.querySelector('.hero__arch');
   if (heroArch && root.classList.contains('intro')) {
-    var tl = gsap.timeline({ defaults: { ease: 'expo.out' }, onComplete: function () { root.classList.remove('intro'); } });
+    /* Explicit start values (x/y 0) so GSAP never inherits the CSS pre-hide transform as a pixel offset,
+       and inline styles are cleared at the end so the CSS state is the source of truth again. */
+    var introTargets = ['.hero__line > span', '.hero__lead', '.hero__actions', '.tonight', heroArch, heroArch.querySelector('img')];
+    var tl = gsap.timeline({
+      defaults: { ease: 'expo.out' },
+      onComplete: function () { root.classList.remove('intro'); gsap.set(introTargets, { clearProps: 'all' }); }
+    });
     tl.fromTo(heroArch, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.6 })
       .fromTo(heroArch.querySelector('img'), { scale: 1.18 }, { scale: 1, duration: 2.2 }, 0)
-      .fromTo('.hero__line > span', { yPercent: 105 }, { yPercent: 0, duration: 1.2, stagger: 0.08 }, 0.35)
+      .fromTo('.hero__line > span', { x: 0, y: 0, yPercent: 105 }, { x: 0, y: 0, yPercent: 0, duration: 1.2, stagger: 0.08 }, 0.35)
       .fromTo(['.hero__lead', '.hero__actions', '.tonight'], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1, stagger: 0.08 }, 0.8);
   } else {
     root.classList.remove('intro');
